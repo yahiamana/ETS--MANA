@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFFFF;
+  --foreground: #223445;
+  --primary: #223445;
+  --primary-foreground: #FFFFFF;
+  --secondary: #7C858A;
+  --accent: #D93B2B;
+  --muted: #F8F9FA;
+  --border: #E2E4E6;
+  --card: #FFFFFF;
+}
+
+.dark {
+  --background: #0D1117;
+  --foreground: #F0F6FC;
+  --primary: #1C2128;
+  --primary-foreground: #F0F6FC;
+  --secondary: #8B949E;
+  --accent: #E54B3B;
+  --muted: #161B22;
+  --border: #30363D;
+  --card: #161B22;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --font-sans: "Inter", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Lenis Smooth Scroll — Core Styles */
+html {
+  scroll-behavior: auto !important; /* Prevent CSS smooth-scroll from conflicting with Lenis */
+  touch-action: manipulation;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+/* Use logical properties for RTL support */
+.container {
+  padding-inline: 1.5rem;
+}
+
+.industrial-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(124, 133, 138, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(124, 133, 138, 0.03) 1px, transparent 1px);
+  will-change: transform;
+}
+
+/* .hero-line, .project-card, .service-card: removed persistent will-change to save memory */
+
+/* Target transitions specifically to links, buttons, and theme-sensitive surfaces only */
+a, button, [role="button"], .transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Ensure no transitions on scroll for performance */
+.lenis-scrolling * {
+  pointer-events: none !important;
 }

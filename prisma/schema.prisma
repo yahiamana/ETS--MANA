@@ -1,0 +1,132 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../lib/generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String?
+  role      String   @default("ADMIN")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  category    String
+  imageUrl    String
+  publicId    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  title       Json
+  description Json
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  icon        String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  title       Json
+  description Json
+}
+
+model QuoteRequest {
+  id          String   @id @default(cuid())
+  firstName   String
+  lastName    String
+  email       String
+  company     String?
+  phone       String?
+  description String
+  fileUrl     String?
+  status      String   @default("PENDING")
+  createdAt   DateTime @default(now())
+}
+
+model JobListing {
+  id           String        @id @default(cuid())
+  department   String
+  location     String        @default("Workshop")
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  jobType      JobType       @default(FULL_TIME)
+  salaryRange  String?
+  status       JobStatus     @default(DRAFT)
+  title        Json
+  description  Json
+  requirements Json
+  applications Application[]
+}
+
+model Application {
+  id        String            @id @default(cuid())
+  fullName  String
+  email     String
+  phone     String
+  cvUrl     String
+  jobId     String
+  createdAt DateTime          @default(now())
+  message   String?
+  notes     String?
+  updatedAt DateTime          @updatedAt
+  status    ApplicationStatus @default(NEW)
+  job       JobListing        @relation(fields: [jobId], references: [id], onDelete: Cascade)
+}
+
+model SiteSetting {
+  id                       String   @id @default("singleton")
+  siteName                 String   @default("MANA")
+  address                  String   @default("123 Industrial Zone, Agricultural District")
+  email                    String   @default("contact@manaworkshops.com")
+  phone                    String   @default("+1 (234) 567-890")
+  whatsapp                 String?
+  facebook                 String?
+  linkedin                 String?
+  instagram                String?
+  logoUrl                  String?
+  heroImageUrl             String?
+  updatedAt                DateTime @updatedAt
+  aboutStoryUrl            String?
+  aboutVisualBreakUrl      String?
+  introImageUrl            String?
+  portfolioProject1Url     String?
+  portfolioProject2Url     String?
+  portfolioProject3Url     String?
+  servicesFabricationUrl   String?
+  servicesMachiningUrl     String?
+  servicesModificationUrl  String?
+  servicesRepairUrl        String?
+  servicesGuidanceUrl      String?
+  servicesManufacturingUrl String?
+  servicesRestorationUrl   String?
+}
+
+enum JobStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum JobType {
+  FULL_TIME
+  PART_TIME
+  CONTRACT
+  INTERNSHIP
+  TEMPORARY
+}
+
+enum ApplicationStatus {
+  NEW
+  REVIEWING
+  INTERVIEW
+  OFFER
+  REJECTED
+  HIRED
+}
