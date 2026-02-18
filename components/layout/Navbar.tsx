@@ -10,10 +10,9 @@ import { useTranslations, useLocale } from "next-intl";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ThemeToggle from "@/components/ThemeToggle";
 
-export default function Navbar() {
+export default function Navbar({ settings }: { settings: { siteName: string; logoUrl: string | null } }) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [settings, setSettings] = useState<{ siteName: string; logoUrl: string | null } | null>(null);
   const t = useTranslations("Navbar");
   const locale = useLocale();
 
@@ -30,13 +29,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll);
-    
-    // Fetch settings for branding
-    fetch("/api/admin/settings")
-      .then(res => res.json())
-      .then(data => setSettings(data))
-      .catch(err => console.error("Nav settings error:", err));
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

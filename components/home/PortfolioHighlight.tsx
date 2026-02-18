@@ -62,9 +62,13 @@ export default function PortfolioHighlight({ projects }: { projects: FeaturedPro
               const title = project.title?.[locale] || project.title?.["en"] || "Untitled";
               return (
                 <div key={project.id} className="portfolio-item group relative aspect-square overflow-hidden bg-primary border border-border">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100"
-                    style={{ backgroundImage: `url(${project.imageUrl})` }}
+                  <Image 
+                    src={project.imageUrl}
+                    alt={title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
                   

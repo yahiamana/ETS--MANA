@@ -10,6 +10,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n/config';
 import { ThemeProvider } from "@/components/theme-provider";
+import { getSiteSettings } from "@/lib/settings";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -43,6 +44,7 @@ export default async function RootLayout({
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
+  const settings = await getSiteSettings();
 
   const direction = locale === 'ar' ? 'rtl' : 'ltr';
 
@@ -53,7 +55,7 @@ export default async function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <SmoothScroll>
               <TransitionProvider>
-                <Navbar />
+                <Navbar settings={{ siteName: settings.siteName, logoUrl: settings.logoUrl }} />
                 <main className="min-h-screen pt-[73px]">
                   {children}
                 </main>
@@ -66,3 +68,4 @@ export default async function RootLayout({
     </html>
   );
 }
+

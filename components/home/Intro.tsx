@@ -74,9 +74,13 @@ export default function Intro({ settings }: { settings: any }) {
           <div className="w-full md:w-1/2 relative">
             <Reveal width="100%" threshold={0.3}>
               <div className="aspect-[4/5] bg-primary relative overflow-hidden border-[12px] border-background shadow-2xl transition-all">
-                <div 
-                  className="absolute inset-0 bg-cover bg-center grayscale contrast-125 opacity-80" 
-                  style={{ backgroundImage: `url(${imageUrl})` }}
+                <Image 
+                  src={imageUrl}
+                  alt="Industrial workshop"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover grayscale contrast-125 opacity-80"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-primary/20 dark:bg-primary/40" />
               </div>

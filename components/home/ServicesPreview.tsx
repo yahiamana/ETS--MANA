@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { Hammer, Drill, Settings2, Construction, ArrowUpRight } from "lucide-react";
+import { Hammer, Drill, Settings2, Construction, Info, ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -41,20 +41,34 @@ export default function ServicesPreview() {
       desc: ts("manufacturingDesc"),
       href: `/${locale}/services#manufacturing`
     },
+    {
+      icon: Info,
+      title: ts("guidanceTitle"),
+      desc: ts("guidanceDesc"),
+      href: `/${locale}/services#guidance`
+    },
   ];
 
   useGSAP(() => {
-    gsap.from(".service-card", {
-      opacity: 0,
-      y: 40,
-      duration: 0.8,
-      stagger: 0.1,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 75%",
+    if (!containerRef.current) return;
+
+    gsap.fromTo(".service-card", 
+      { 
+        opacity: 0, 
+        y: 40 
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 85%", // Trigger slightly earlier
+        }
       }
-    });
+    );
   }, { scope: containerRef });
 
   return (
@@ -84,7 +98,7 @@ export default function ServicesPreview() {
           </Reveal>
         </div>
 
-        <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+        <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-border border border-border">
           {services.map((service, i) => (
             <div key={i} className="service-card group bg-background p-10 hover:bg-primary transition-colors duration-500">
               <div className="bg-muted p-4 w-16 h-16 flex items-center justify-center mb-8 group-hover:bg-accent group-hover:text-primary-foreground transition-colors duration-500">

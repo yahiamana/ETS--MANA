@@ -4,6 +4,10 @@ import type { NextConfig } from "next";
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
+  serverExternalPackages: ['pg'],
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'three', '@react-three/drei', '@react-three/fiber'],
+  },
   images: {
     remotePatterns: [
       {

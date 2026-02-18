@@ -45,13 +45,11 @@ export default function Reveal({
       {
         y: 40,
         opacity: 0,
-        filter: "blur(12px)",
-        willChange: "transform, opacity, filter"
+        willChange: "transform, opacity"
       },
       {
         y: 0,
         opacity: 1,
-        filter: "blur(0px)",
         duration: duration,
         delay: delay,
         ease: "power3.out",
@@ -65,7 +63,6 @@ export default function Reveal({
           // Clean up GPU hint to save memory
           if (ref.current) {
             ref.current.style.willChange = "auto"; 
-            ref.current.style.filter = "none"; // Fix blur artifacts
           }
         }
       }
@@ -74,7 +71,7 @@ export default function Reveal({
 
   // Initial opacity 0 to prevent flash of unstyled content
   return (
-    <div ref={ref} style={{ width, opacity: 0 }}>
+    <div ref={ref} style={{ width }}>
       {children}
     </div>
   );

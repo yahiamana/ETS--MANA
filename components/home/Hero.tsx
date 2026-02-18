@@ -1,9 +1,8 @@
 "use client";
 
 import { useRef, Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { Environment, ContactShadows } from "@react-three/drei";
-import { EffectComposer, Bloom, Vignette } from "@react-three/postprocessing";
+import { Canvas, useThree } from "@react-three/fiber";
+import { ContactShadows } from "@react-three/drei";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import gsap from "gsap";
@@ -12,8 +11,8 @@ import { useGSAP } from "@gsap/react";
 import dynamic from "next/dynamic";
 import SceneOptimizer from "@/components/performance/SceneOptimizer";
 
-import * as THREE from "three";
-import { useThree } from "@react-three/fiber";
+import { ACESFilmicToneMapping } from "three";
+import type { Group } from "three";
 
 import { useHeroScrollAnimations } from "@/hooks/useScrollAnimations";
 import CinematicController from "@/components/visuals/CinematicController";
@@ -44,7 +43,7 @@ export default function Hero({ settings }: { settings: any }) {
   const siteName = settings.siteName || "MANA";
   
   // Reference to 3D object for scroll animation
-  const objectRef = useRef<THREE.Group>(null);
+  const objectRef = useRef<Group>(null);
 
   // ── Scroll-driven animations ────────────────────────────────────────────
   // containerRef: the hero section (scroll trigger boundary)
@@ -75,10 +74,10 @@ export default function Hero({ settings }: { settings: any }) {
             alpha: true,
             stencil: false,
             depth: true,
-            toneMapping: THREE.ACESFilmicToneMapping,
+            toneMapping: ACESFilmicToneMapping,
             toneMappingExposure: 1.0
           }}
-          dpr={[1, 1.2]} // Optimized DPR for performance
+          dpr={[1, 1]} // Fixed DPR for performance — no supersampling
         >
           {/* Cinematic industrial lighting rig */}
           <ambientLight intensity={0.2} />
@@ -126,17 +125,6 @@ export default function Hero({ settings }: { settings: any }) {
               />
               
               <MachiningGrid />
-              <Environment preset="city" />
-              
-              <EffectComposer multisampling={4}>
-                <Bloom 
-                  intensity={0.4} // Reduced intensity for performance
-                  mipmapBlur 
-                  luminanceThreshold={1} 
-                  luminanceSmoothing={0.9}
-                />
-                <Vignette eskil={false} offset={0.1} darkness={0.85} />
-              </EffectComposer>
             </SceneOptimizer>
           </Suspense>
         </Canvas>
