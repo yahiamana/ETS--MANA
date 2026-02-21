@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, use } from "react";
-import { Loader2, Save, Globe, Phone, Mail, MapPin, Facebook, Linkedin, Instagram, Twitter, Image as ImageIcon, CheckCircle2, AlertCircle } from "lucide-react";
+import { Loader2, Save, Globe, Phone, Mail, MapPin, Clock, Facebook, Linkedin, Instagram, Twitter, Image as ImageIcon, CheckCircle2, AlertCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface SiteSettings {
@@ -34,6 +34,15 @@ interface SiteSettings {
   // About Page Media
   aboutStoryUrl: string | null;
   aboutVisualBreakUrl: string | null;
+
+  // Business Hours
+  businessHoursMon: string;
+  businessHoursTue: string;
+  businessHoursWed: string;
+  businessHoursThu: string;
+  businessHoursFri: string;
+  businessHoursSat: string;
+  businessHoursSun: string;
 }
 
 export default function SettingsPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -156,7 +165,7 @@ export default function SettingsPage({ params }: { params: Promise<{ locale: str
               <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">Website Name</label>
               <input 
                 type="text" 
-                value={settings.siteName}
+                value={settings.siteName || ""}
                 onChange={(e) => setSettings({ ...settings, siteName: e.target.value })}
                 className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 text-sm font-bold focus:border-accent outline-none transition-colors"
                 placeholder="e.g. MANA Workshops"
@@ -168,7 +177,7 @@ export default function SettingsPage({ params }: { params: Promise<{ locale: str
                 <MapPin className="absolute left-4 top-4 w-4 h-4 text-slate-400" />
                 <input 
                   type="text" 
-                  value={settings.address}
+                  value={settings.address || ""}
                   onChange={(e) => setSettings({ ...settings, address: e.target.value })}
                   className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 pl-12 text-sm font-bold focus:border-accent outline-none transition-colors"
                   placeholder="Street, City, Country"
@@ -191,7 +200,7 @@ export default function SettingsPage({ params }: { params: Promise<{ locale: str
                 <Mail className="absolute left-4 top-4 w-4 h-4 text-slate-400" />
                 <input 
                   type="email" 
-                  value={settings.email}
+                  value={settings.email || ""}
                   onChange={(e) => setSettings({ ...settings, email: e.target.value })}
                   className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 pl-12 text-sm font-bold focus:border-accent outline-none transition-colors"
                 />
@@ -203,12 +212,57 @@ export default function SettingsPage({ params }: { params: Promise<{ locale: str
                 <Phone className="absolute left-4 top-4 w-4 h-4 text-slate-400" />
                 <input 
                   type="text" 
-                  value={settings.phone}
+                  value={settings.phone || ""}
                   onChange={(e) => setSettings({ ...settings, phone: e.target.value })}
                   className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 pl-12 text-sm font-bold focus:border-accent outline-none transition-colors"
                 />
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Business Hours */}
+        <section className="bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-8 md:p-12 shadow-xl">
+          <h3 className="text-xl font-black uppercase tracking-tight mb-10 border-b border-slate-100 dark:border-slate-800 pb-4 flex items-center gap-3">
+            <Clock className="w-6 h-6 text-accent" />
+            Business Hours
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <BusinessHoursField 
+              label="Monday" 
+              value={settings.businessHoursMon || ""} 
+              onChange={(val) => setSettings({ ...settings, businessHoursMon: val })} 
+            />
+            <BusinessHoursField 
+              label="Tuesday" 
+              value={settings.businessHoursTue || ""} 
+              onChange={(val) => setSettings({ ...settings, businessHoursTue: val })} 
+            />
+            <BusinessHoursField 
+              label="Wednesday" 
+              value={settings.businessHoursWed || ""} 
+              onChange={(val) => setSettings({ ...settings, businessHoursWed: val })} 
+            />
+            <BusinessHoursField 
+              label="Thursday" 
+              value={settings.businessHoursThu || ""} 
+              onChange={(val) => setSettings({ ...settings, businessHoursThu: val })} 
+            />
+            <BusinessHoursField 
+              label="Friday" 
+              value={settings.businessHoursFri || ""} 
+              onChange={(val) => setSettings({ ...settings, businessHoursFri: val })} 
+            />
+            <BusinessHoursField 
+              label="Saturday" 
+              value={settings.businessHoursSat || ""} 
+              onChange={(val) => setSettings({ ...settings, businessHoursSat: val })} 
+            />
+            <BusinessHoursField 
+              label="Sunday" 
+              value={settings.businessHoursSun || ""} 
+              onChange={(val) => setSettings({ ...settings, businessHoursSun: val })} 
+            />
           </div>
         </section>
 
@@ -380,6 +434,86 @@ export default function SettingsPage({ params }: { params: Promise<{ locale: str
   );
 }
 
+function BusinessHoursField({ 
+  label, 
+  value, 
+  onChange 
+}: { 
+  label: string; 
+  value: string; 
+  onChange: (val: string) => void; 
+}) {
+  const isClosed = value === "Closed" || !value;
+  const times = !isClosed ? value.split(" - ") : ["08:00", "18:00"];
+  const start = times[0] || "08:00";
+  const end = times[1] || "18:00";
+
+  const handleToggle = () => {
+    if (isClosed) {
+      onChange(`${start} - ${end}`);
+    } else {
+      onChange("Closed");
+    }
+  };
+
+  const handleTimeChange = (type: "start" | "end", newVal: string) => {
+    if (type === "start") {
+      onChange(`${newVal} - ${end}`);
+    } else {
+      onChange(`${start} - ${newVal}`);
+    }
+  };
+
+  return (
+    <div className="space-y-4 p-4 border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
+      <div className="flex justify-between items-center mb-2">
+        <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">{label}</label>
+        <button
+          type="button"
+          onClick={handleToggle}
+          className={cn(
+            "text-[10px] font-black uppercase tracking-widest px-3 py-1 transition-colors border",
+            isClosed 
+              ? "bg-slate-200 dark:bg-slate-800 text-slate-500 border-slate-300 dark:border-slate-700" 
+              : "bg-emerald-500 text-white border-emerald-600"
+          )}
+        >
+          {isClosed ? "Closed" : "Open"}
+        </button>
+      </div>
+
+      {!isClosed && (
+        <div className="grid grid-cols-2 gap-4 animate-in fade-in slide-in-from-top-2 duration-300">
+          <div className="space-y-1">
+            <span className="text-[9px] font-bold uppercase text-slate-400">Opening</span>
+            <input 
+              type="time" 
+              value={start}
+              onChange={(e) => handleTimeChange("start", e.target.value)}
+              className="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-2 text-sm font-black focus:border-accent outline-none transition-colors"
+            />
+          </div>
+          <div className="space-y-1">
+            <span className="text-[9px] font-bold uppercase text-slate-400">Closing</span>
+            <input 
+              type="time" 
+              value={end}
+              onChange={(e) => handleTimeChange("end", e.target.value)}
+              className="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-2 text-sm font-black focus:border-accent outline-none transition-colors"
+            />
+          </div>
+        </div>
+      )}
+      
+      {isClosed && (
+        <div className="h-[49px] flex items-center justify-center border border-dashed border-slate-200 dark:border-slate-800 text-slate-400 italic text-xs font-medium">
+          Workshop Closed
+        </div>
+      )}
+    </div>
+  );
+}
+
 function ImageUploadField({ 
   label, 
   value, 
@@ -416,3 +550,4 @@ function ImageUploadField({
     </div>
   );
 }
+

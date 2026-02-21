@@ -20,10 +20,51 @@ const inter = Inter({
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Hero' });
- 
+  const baseUrl = 'https://mana-industrial.com';
+  const siteName = 'MANA Industrial Workshop';
+  const fullTitle = `MANA | ${t('titlePart1')} ${t('titlePart2')}`;
+  const description = "Professional industrial workshop specializing in manufacturing, repairing, and modifying metal parts for agricultural equipment since 1998.";
+
   return {
-    title: `MANA | ${t('titlePart1')} ${t('titlePart2')}`,
-    description: "Professional industrial workshop specializing in manufacturing, repairing, and modifying metal parts for agricultural equipment.",
+    title: fullTitle,
+    description,
+    keywords: ["machining", "agricultural repair", "milling", "turning", "Oran", "Algeria", "metal fabrication", "industrial maintenance"],
+    authors: [{ name: "MANA Team" }],
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        'en': '/en',
+        'fr': '/fr',
+        'ar': '/ar',
+      },
+    },
+    openGraph: {
+      title: fullTitle,
+      description,
+      url: `${baseUrl}/${locale}`,
+      siteName,
+      locale,
+      type: 'website',
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: siteName,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: fullTitle,
+      description,
+      images: ['/og-image.jpg'],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 

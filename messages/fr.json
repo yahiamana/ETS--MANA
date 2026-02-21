@@ -90,12 +90,16 @@
         "directLine": "Ligne Directe",
         "emailInquiry": "Demande par Email",
         "businessHours": "Heures d'Ouverture",
-        "mondayFriday": "Lundi - Vendredi",
+        "mapPlaceholder": "Carte Interactive",
+        "sendMessage": "Envoyer un Message",
+        "monday": "Lundi",
+        "tuesday": "Mardi",
+        "wednesday": "Mercredi",
+        "thursday": "Jeudi",
+        "friday": "Vendredi",
         "saturday": "Samedi",
         "sunday": "Dimanche",
-        "sundayTime": "Fermé / Urgences Uniquement",
-        "mapPlaceholder": "Carte Interactive",
-        "sendMessage": "Envoyer un Message"
+        "closedStatus": "Fermé"
     },
     "Recruitment": {
         "workWithUs": "Travaillez avec Nous",

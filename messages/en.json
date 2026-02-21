@@ -90,12 +90,16 @@
         "directLine": "Direct Line",
         "emailInquiry": "Email Inquiry",
         "businessHours": "Business Hours",
-        "mondayFriday": "Monday - Friday",
+        "mapPlaceholder": "Interactive Map Integration",
+        "sendMessage": "Send a Message",
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
         "saturday": "Saturday",
         "sunday": "Sunday",
-        "sundayTime": "Closed / Emergency Only",
-        "mapPlaceholder": "Interactive Map Integration",
-        "sendMessage": "Send a Message"
+        "closedStatus": "Closed"
     },
     "Recruitment": {
         "workWithUs": "Work with Us",

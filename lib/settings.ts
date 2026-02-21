@@ -36,6 +36,13 @@ export async function getSiteSettings() {
       servicesModificationUrl: null,
       aboutStoryUrl: null,
       aboutVisualBreakUrl: null,
+      businessHoursMon: "08:00 - 18:00",
+      businessHoursTue: "08:00 - 18:00",
+      businessHoursWed: "08:00 - 18:00",
+      businessHoursThu: "08:00 - 18:00",
+      businessHoursFri: "08:00 - 18:00",
+      businessHoursSat: "09:00 - 13:00",
+      businessHoursSun: "Closed",
     };
   }
 }

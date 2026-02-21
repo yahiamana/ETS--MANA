@@ -13,7 +13,7 @@ declare global {
   var prismaVersion: string | undefined;
 }
 
-const PRISMA_CLIENT_VERSION = "v12"; // Increment this to force re-instantiation
+const PRISMA_CLIENT_VERSION = "v13"; // Increment this to force re-instantiation
 
 const prisma = (() => {
   if (globalThis.prismaGlobal && (globalThis as any).prismaVersion === PRISMA_CLIENT_VERSION) {

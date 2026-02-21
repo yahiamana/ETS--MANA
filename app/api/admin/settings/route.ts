@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import prisma from "@/lib/prisma";
 
 export async function GET() {
@@ -31,7 +32,9 @@ export async function PATCH(req: Request) {
       "introImageUrl", "portfolioProject1Url", "portfolioProject2Url", "portfolioProject3Url",
       "servicesMachiningUrl", "servicesRepairUrl", "servicesFabricationUrl", "servicesModificationUrl",
       "servicesManufacturingUrl", "servicesRestorationUrl", "servicesGuidanceUrl",
-      "aboutStoryUrl", "aboutVisualBreakUrl"
+      "aboutStoryUrl", "aboutVisualBreakUrl",
+      "businessHoursMon", "businessHoursTue", "businessHoursWed", 
+      "businessHoursThu", "businessHoursFri", "businessHoursSat", "businessHoursSun"
     ];
 
     const updateData: any = {};
@@ -46,6 +49,10 @@ export async function PATCH(req: Request) {
       update: updateData,
       create: { ...updateData, id: "singleton" },
     });
+
+    // Revalidate paths to reflect changes immediately
+    revalidatePath("/");
+    revalidatePath("/[locale]/contact", "page");
 
     return NextResponse.json(settings);
   } catch (error: any) {

@@ -2538,13 +2538,13 @@ export namespace Prisma {
 
   export type ProjectCountAggregateOutputType = {
     id: number
-    title: number
-    description: number
     category: number
     imageUrl: number
     publicId: number
     createdAt: number
     updatedAt: number
+    title: number
+    description: number
     _all: number
   }
 
@@ -2569,13 +2569,13 @@ export namespace Prisma {
 
   export type ProjectCountAggregateInputType = {
     id?: true
-    title?: true
-    description?: true
     category?: true
     imageUrl?: true
     publicId?: true
     createdAt?: true
     updatedAt?: true
+    title?: true
+    description?: true
     _all?: true
   }
 
@@ -2653,13 +2653,13 @@ export namespace Prisma {
 
   export type ProjectGroupByOutputType = {
     id: string
-    title: JsonValue
-    description: JsonValue
     category: string
     imageUrl: string
     publicId: string
     createdAt: Date
     updatedAt: Date
+    title: JsonValue
+    description: JsonValue
     _count: ProjectCountAggregateOutputType | null
     _min: ProjectMinAggregateOutputType | null
     _max: ProjectMaxAggregateOutputType | null
@@ -2681,62 +2681,62 @@ export namespace Prisma {
 
   export type ProjectSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title?: boolean
-    description?: boolean
     category?: boolean
     imageUrl?: boolean
     publicId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    title?: boolean
+    description?: boolean
   }, ExtArgs["result"]["project"]>
 
   export type ProjectSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title?: boolean
-    description?: boolean
     category?: boolean
     imageUrl?: boolean
     publicId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    title?: boolean
+    description?: boolean
   }, ExtArgs["result"]["project"]>
 
   export type ProjectSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title?: boolean
-    description?: boolean
     category?: boolean
     imageUrl?: boolean
     publicId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    title?: boolean
+    description?: boolean
   }, ExtArgs["result"]["project"]>
 
   export type ProjectSelectScalar = {
     id?: boolean
-    title?: boolean
-    description?: boolean
     category?: boolean
     imageUrl?: boolean
     publicId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    title?: boolean
+    description?: boolean
   }
 
-  export type ProjectOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "category" | "imageUrl" | "publicId" | "createdAt" | "updatedAt", ExtArgs["result"]["project"]>
+  export type ProjectOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "category" | "imageUrl" | "publicId" | "createdAt" | "updatedAt" | "title" | "description", ExtArgs["result"]["project"]>
 
   export type $ProjectPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Project"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
-      title: Prisma.JsonValue
-      description: Prisma.JsonValue
       category: string
       imageUrl: string
       publicId: string
       createdAt: Date
       updatedAt: Date
+      title: Prisma.JsonValue
+      description: Prisma.JsonValue
     }, ExtArgs["result"]["project"]>
     composites: {}
   }
@@ -3161,13 +3161,13 @@ export namespace Prisma {
    */
   interface ProjectFieldRefs {
     readonly id: FieldRef<"Project", 'String'>
-    readonly title: FieldRef<"Project", 'Json'>
-    readonly description: FieldRef<"Project", 'Json'>
     readonly category: FieldRef<"Project", 'String'>
     readonly imageUrl: FieldRef<"Project", 'String'>
     readonly publicId: FieldRef<"Project", 'String'>
     readonly createdAt: FieldRef<"Project", 'DateTime'>
     readonly updatedAt: FieldRef<"Project", 'DateTime'>
+    readonly title: FieldRef<"Project", 'Json'>
+    readonly description: FieldRef<"Project", 'Json'>
   }
     
 
@@ -3560,11 +3560,11 @@ export namespace Prisma {
 
   export type ServiceCountAggregateOutputType = {
     id: number
-    title: number
-    description: number
     icon: number
     createdAt: number
     updatedAt: number
+    title: number
+    description: number
     _all: number
   }
 
@@ -3585,11 +3585,11 @@ export namespace Prisma {
 
   export type ServiceCountAggregateInputType = {
     id?: true
-    title?: true
-    description?: true
     icon?: true
     createdAt?: true
     updatedAt?: true
+    title?: true
+    description?: true
     _all?: true
   }
 
@@ -3667,11 +3667,11 @@ export namespace Prisma {
 
   export type ServiceGroupByOutputType = {
     id: string
-    title: JsonValue
-    description: JsonValue
     icon: string | null
     createdAt: Date
     updatedAt: Date
+    title: JsonValue
+    description: JsonValue
     _count: ServiceCountAggregateOutputType | null
     _min: ServiceMinAggregateOutputType | null
     _max: ServiceMaxAggregateOutputType | null
@@ -3693,52 +3693,52 @@ export namespace Prisma {
 
   export type ServiceSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title?: boolean
-    description?: boolean
     icon?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    title?: boolean
+    description?: boolean
   }, ExtArgs["result"]["service"]>
 
   export type ServiceSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title?: boolean
-    description?: boolean
     icon?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    title?: boolean
+    description?: boolean
   }, ExtArgs["result"]["service"]>
 
   export type ServiceSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title?: boolean
-    description?: boolean
     icon?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    title?: boolean
+    description?: boolean
   }, ExtArgs["result"]["service"]>
 
   export type ServiceSelectScalar = {
     id?: boolean
-    title?: boolean
-    description?: boolean
     icon?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    title?: boolean
+    description?: boolean
   }
 
-  export type ServiceOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "icon" | "createdAt" | "updatedAt", ExtArgs["result"]["service"]>
+  export type ServiceOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "icon" | "createdAt" | "updatedAt" | "title" | "description", ExtArgs["result"]["service"]>
 
   export type $ServicePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Service"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
-      title: Prisma.JsonValue
-      description: Prisma.JsonValue
       icon: string | null
       createdAt: Date
       updatedAt: Date
+      title: Prisma.JsonValue
+      description: Prisma.JsonValue
     }, ExtArgs["result"]["service"]>
     composites: {}
   }
@@ -4163,11 +4163,11 @@ export namespace Prisma {
    */
   interface ServiceFieldRefs {
     readonly id: FieldRef<"Service", 'String'>
-    readonly title: FieldRef<"Service", 'Json'>
-    readonly description: FieldRef<"Service", 'Json'>
     readonly icon: FieldRef<"Service", 'String'>
     readonly createdAt: FieldRef<"Service", 'DateTime'>
     readonly updatedAt: FieldRef<"Service", 'DateTime'>
+    readonly title: FieldRef<"Service", 'Json'>
+    readonly description: FieldRef<"Service", 'Json'>
   }
     
 
@@ -5608,36 +5608,36 @@ export namespace Prisma {
     id: string | null
     department: string | null
     location: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
     jobType: $Enums.JobType | null
     salaryRange: string | null
     status: $Enums.JobStatus | null
-    createdAt: Date | null
-    updatedAt: Date | null
   }
 
   export type JobListingMaxAggregateOutputType = {
     id: string | null
     department: string | null
     location: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
     jobType: $Enums.JobType | null
     salaryRange: string | null
     status: $Enums.JobStatus | null
-    createdAt: Date | null
-    updatedAt: Date | null
   }
 
   export type JobListingCountAggregateOutputType = {
     id: number
-    title: number
     department: number
     location: number
-    jobType: number
-    salaryRange: number
-    description: number
-    requirements: number
-    status: number
     createdAt: number
     updatedAt: number
+    jobType: number
+    salaryRange: number
+    status: number
+    title: number
+    description: number
+    requirements: number
     _all: number
   }
 
@@ -5646,36 +5646,36 @@ export namespace Prisma {
     id?: true
     department?: true
     location?: true
+    createdAt?: true
+    updatedAt?: true
     jobType?: true
     salaryRange?: true
     status?: true
-    createdAt?: true
-    updatedAt?: true
   }
 
   export type JobListingMaxAggregateInputType = {
     id?: true
     department?: true
     location?: true
+    createdAt?: true
+    updatedAt?: true
     jobType?: true
     salaryRange?: true
     status?: true
-    createdAt?: true
-    updatedAt?: true
   }
 
   export type JobListingCountAggregateInputType = {
     id?: true
-    title?: true
     department?: true
     location?: true
-    jobType?: true
-    salaryRange?: true
-    description?: true
-    requirements?: true
-    status?: true
     createdAt?: true
     updatedAt?: true
+    jobType?: true
+    salaryRange?: true
+    status?: true
+    title?: true
+    description?: true
+    requirements?: true
     _all?: true
   }
 
@@ -5753,16 +5753,16 @@ export namespace Prisma {
 
   export type JobListingGroupByOutputType = {
     id: string
-    title: JsonValue
     department: string
     location: string
-    jobType: $Enums.JobType
-    salaryRange: string | null
-    description: JsonValue
-    requirements: JsonValue
-    status: $Enums.JobStatus
     createdAt: Date
     updatedAt: Date
+    jobType: $Enums.JobType
+    salaryRange: string | null
+    status: $Enums.JobStatus
+    title: JsonValue
+    description: JsonValue
+    requirements: JsonValue
     _count: JobListingCountAggregateOutputType | null
     _min: JobListingMinAggregateOutputType | null
     _max: JobListingMaxAggregateOutputType | null
@@ -5784,63 +5784,63 @@ export namespace Prisma {
 
   export type JobListingSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title?: boolean
     department?: boolean
     location?: boolean
-    jobType?: boolean
-    salaryRange?: boolean
-    description?: boolean
-    requirements?: boolean
-    status?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    jobType?: boolean
+    salaryRange?: boolean
+    status?: boolean
+    title?: boolean
+    description?: boolean
+    requirements?: boolean
     applications?: boolean | JobListing$applicationsArgs<ExtArgs>
     _count?: boolean | JobListingCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["jobListing"]>
 
   export type JobListingSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title?: boolean
     department?: boolean
     location?: boolean
-    jobType?: boolean
-    salaryRange?: boolean
-    description?: boolean
-    requirements?: boolean
-    status?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    jobType?: boolean
+    salaryRange?: boolean
+    status?: boolean
+    title?: boolean
+    description?: boolean
+    requirements?: boolean
   }, ExtArgs["result"]["jobListing"]>
 
   export type JobListingSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title?: boolean
     department?: boolean
     location?: boolean
-    jobType?: boolean
-    salaryRange?: boolean
-    description?: boolean
-    requirements?: boolean
-    status?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    jobType?: boolean
+    salaryRange?: boolean
+    status?: boolean
+    title?: boolean
+    description?: boolean
+    requirements?: boolean
   }, ExtArgs["result"]["jobListing"]>
 
   export type JobListingSelectScalar = {
     id?: boolean
-    title?: boolean
     department?: boolean
     location?: boolean
-    jobType?: boolean
-    salaryRange?: boolean
-    description?: boolean
-    requirements?: boolean
-    status?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    jobType?: boolean
+    salaryRange?: boolean
+    status?: boolean
+    title?: boolean
+    description?: boolean
+    requirements?: boolean
   }
 
-  export type JobListingOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "department" | "location" | "jobType" | "salaryRange" | "description" | "requirements" | "status" | "createdAt" | "updatedAt", ExtArgs["result"]["jobListing"]>
+  export type JobListingOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "department" | "location" | "createdAt" | "updatedAt" | "jobType" | "salaryRange" | "status" | "title" | "description" | "requirements", ExtArgs["result"]["jobListing"]>
   export type JobListingInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     applications?: boolean | JobListing$applicationsArgs<ExtArgs>
     _count?: boolean | JobListingCountOutputTypeDefaultArgs<ExtArgs>
@@ -5855,16 +5855,16 @@ export namespace Prisma {
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
-      title: Prisma.JsonValue
       department: string
       location: string
-      jobType: $Enums.JobType
-      salaryRange: string | null
-      description: Prisma.JsonValue
-      requirements: Prisma.JsonValue
-      status: $Enums.JobStatus
       createdAt: Date
       updatedAt: Date
+      jobType: $Enums.JobType
+      salaryRange: string | null
+      status: $Enums.JobStatus
+      title: Prisma.JsonValue
+      description: Prisma.JsonValue
+      requirements: Prisma.JsonValue
     }, ExtArgs["result"]["jobListing"]>
     composites: {}
   }
@@ -6290,16 +6290,16 @@ export namespace Prisma {
    */
   interface JobListingFieldRefs {
     readonly id: FieldRef<"JobListing", 'String'>
-    readonly title: FieldRef<"JobListing", 'Json'>
     readonly department: FieldRef<"JobListing", 'String'>
     readonly location: FieldRef<"JobListing", 'String'>
-    readonly jobType: FieldRef<"JobListing", 'JobType'>
-    readonly salaryRange: FieldRef<"JobListing", 'String'>
-    readonly description: FieldRef<"JobListing", 'Json'>
-    readonly requirements: FieldRef<"JobListing", 'Json'>
-    readonly status: FieldRef<"JobListing", 'JobStatus'>
     readonly createdAt: FieldRef<"JobListing", 'DateTime'>
     readonly updatedAt: FieldRef<"JobListing", 'DateTime'>
+    readonly jobType: FieldRef<"JobListing", 'JobType'>
+    readonly salaryRange: FieldRef<"JobListing", 'String'>
+    readonly status: FieldRef<"JobListing", 'JobStatus'>
+    readonly title: FieldRef<"JobListing", 'Json'>
+    readonly description: FieldRef<"JobListing", 'Json'>
+    readonly requirements: FieldRef<"JobListing", 'Json'>
   }
     
 
@@ -6746,12 +6746,12 @@ export namespace Prisma {
     email: string | null
     phone: string | null
     cvUrl: string | null
+    jobId: string | null
+    createdAt: Date | null
     message: string | null
     notes: string | null
-    jobId: string | null
-    status: $Enums.ApplicationStatus | null
-    createdAt: Date | null
     updatedAt: Date | null
+    status: $Enums.ApplicationStatus | null
   }
 
   export type ApplicationMaxAggregateOutputType = {
@@ -6760,12 +6760,12 @@ export namespace Prisma {
     email: string | null
     phone: string | null
     cvUrl: string | null
+    jobId: string | null
+    createdAt: Date | null
     message: string | null
     notes: string | null
-    jobId: string | null
-    status: $Enums.ApplicationStatus | null
-    createdAt: Date | null
     updatedAt: Date | null
+    status: $Enums.ApplicationStatus | null
   }
 
   export type ApplicationCountAggregateOutputType = {
@@ -6774,12 +6774,12 @@ export namespace Prisma {
     email: number
     phone: number
     cvUrl: number
+    jobId: number
+    createdAt: number
     message: number
     notes: number
-    jobId: number
-    status: number
-    createdAt: number
     updatedAt: number
+    status: number
     _all: number
   }
 
@@ -6790,12 +6790,12 @@ export namespace Prisma {
     email?: true
     phone?: true
     cvUrl?: true
+    jobId?: true
+    createdAt?: true
     message?: true
     notes?: true
-    jobId?: true
-    status?: true
-    createdAt?: true
     updatedAt?: true
+    status?: true
   }
 
   export type ApplicationMaxAggregateInputType = {
@@ -6804,12 +6804,12 @@ export namespace Prisma {
     email?: true
     phone?: true
     cvUrl?: true
+    jobId?: true
+    createdAt?: true
     message?: true
     notes?: true
-    jobId?: true
-    status?: true
-    createdAt?: true
     updatedAt?: true
+    status?: true
   }
 
   export type ApplicationCountAggregateInputType = {
@@ -6818,12 +6818,12 @@ export namespace Prisma {
     email?: true
     phone?: true
     cvUrl?: true
+    jobId?: true
+    createdAt?: true
     message?: true
     notes?: true
-    jobId?: true
-    status?: true
-    createdAt?: true
     updatedAt?: true
+    status?: true
     _all?: true
   }
 
@@ -6905,12 +6905,12 @@ export namespace Prisma {
     email: string
     phone: string
     cvUrl: string
+    jobId: string
+    createdAt: Date
     message: string | null
     notes: string | null
-    jobId: string
-    status: $Enums.ApplicationStatus
-    createdAt: Date
     updatedAt: Date
+    status: $Enums.ApplicationStatus
     _count: ApplicationCountAggregateOutputType | null
     _min: ApplicationMinAggregateOutputType | null
     _max: ApplicationMaxAggregateOutputType | null
@@ -6936,12 +6936,12 @@ export namespace Prisma {
     email?: boolean
     phone?: boolean
     cvUrl?: boolean
+    jobId?: boolean
+    createdAt?: boolean
     message?: boolean
     notes?: boolean
-    jobId?: boolean
-    status?: boolean
-    createdAt?: boolean
     updatedAt?: boolean
+    status?: boolean
     job?: boolean | JobListingDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["application"]>
 
@@ -6951,12 +6951,12 @@ export namespace Prisma {
     email?: boolean
     phone?: boolean
     cvUrl?: boolean
+    jobId?: boolean
+    createdAt?: boolean
     message?: boolean
     notes?: boolean
-    jobId?: boolean
-    status?: boolean
-    createdAt?: boolean
     updatedAt?: boolean
+    status?: boolean
     job?: boolean | JobListingDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["application"]>
 
@@ -6966,12 +6966,12 @@ export namespace Prisma {
     email?: boolean
     phone?: boolean
     cvUrl?: boolean
+    jobId?: boolean
+    createdAt?: boolean
     message?: boolean
     notes?: boolean
-    jobId?: boolean
-    status?: boolean
-    createdAt?: boolean
     updatedAt?: boolean
+    status?: boolean
     job?: boolean | JobListingDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["application"]>
 
@@ -6981,15 +6981,15 @@ export namespace Prisma {
     email?: boolean
     phone?: boolean
     cvUrl?: boolean
+    jobId?: boolean
+    createdAt?: boolean
     message?: boolean
     notes?: boolean
-    jobId?: boolean
-    status?: boolean
-    createdAt?: boolean
     updatedAt?: boolean
+    status?: boolean
   }
 
-  export type ApplicationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "fullName" | "email" | "phone" | "cvUrl" | "message" | "notes" | "jobId" | "status" | "createdAt" | "updatedAt", ExtArgs["result"]["application"]>
+  export type ApplicationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "fullName" | "email" | "phone" | "cvUrl" | "jobId" | "createdAt" | "message" | "notes" | "updatedAt" | "status", ExtArgs["result"]["application"]>
   export type ApplicationInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     job?: boolean | JobListingDefaultArgs<ExtArgs>
   }
@@ -7011,12 +7011,12 @@ export namespace Prisma {
       email: string
       phone: string
       cvUrl: string
+      jobId: string
+      createdAt: Date
       message: string | null
       notes: string | null
-      jobId: string
-      status: $Enums.ApplicationStatus
-      createdAt: Date
       updatedAt: Date
+      status: $Enums.ApplicationStatus
     }, ExtArgs["result"]["application"]>
     composites: {}
   }
@@ -7446,12 +7446,12 @@ export namespace Prisma {
     readonly email: FieldRef<"Application", 'String'>
     readonly phone: FieldRef<"Application", 'String'>
     readonly cvUrl: FieldRef<"Application", 'String'>
+    readonly jobId: FieldRef<"Application", 'String'>
+    readonly createdAt: FieldRef<"Application", 'DateTime'>
     readonly message: FieldRef<"Application", 'String'>
     readonly notes: FieldRef<"Application", 'String'>
-    readonly jobId: FieldRef<"Application", 'String'>
-    readonly status: FieldRef<"Application", 'ApplicationStatus'>
-    readonly createdAt: FieldRef<"Application", 'DateTime'>
     readonly updatedAt: FieldRef<"Application", 'DateTime'>
+    readonly status: FieldRef<"Application", 'ApplicationStatus'>
   }
     
 
@@ -7888,20 +7888,27 @@ export namespace Prisma {
     instagram: string | null
     logoUrl: string | null
     heroImageUrl: string | null
+    updatedAt: Date | null
+    aboutStoryUrl: string | null
+    aboutVisualBreakUrl: string | null
     introImageUrl: string | null
     portfolioProject1Url: string | null
     portfolioProject2Url: string | null
     portfolioProject3Url: string | null
-    servicesMachiningUrl: string | null
-    servicesRepairUrl: string | null
     servicesFabricationUrl: string | null
+    servicesMachiningUrl: string | null
     servicesModificationUrl: string | null
+    servicesRepairUrl: string | null
+    servicesGuidanceUrl: string | null
     servicesManufacturingUrl: string | null
     servicesRestorationUrl: string | null
-    servicesGuidanceUrl: string | null
-    aboutStoryUrl: string | null
-    aboutVisualBreakUrl: string | null
-    updatedAt: Date | null
+    businessHoursMon: string | null
+    businessHoursTue: string | null
+    businessHoursWed: string | null
+    businessHoursThu: string | null
+    businessHoursFri: string | null
+    businessHoursSat: string | null
+    businessHoursSun: string | null
   }
 
   export type SiteSettingMaxAggregateOutputType = {
@@ -7916,20 +7923,27 @@ export namespace Prisma {
     instagram: string | null
     logoUrl: string | null
     heroImageUrl: string | null
+    updatedAt: Date | null
+    aboutStoryUrl: string | null
+    aboutVisualBreakUrl: string | null
     introImageUrl: string | null
     portfolioProject1Url: string | null
     portfolioProject2Url: string | null
     portfolioProject3Url: string | null
-    servicesMachiningUrl: string | null
-    servicesRepairUrl: string | null
     servicesFabricationUrl: string | null
+    servicesMachiningUrl: string | null
     servicesModificationUrl: string | null
+    servicesRepairUrl: string | null
+    servicesGuidanceUrl: string | null
     servicesManufacturingUrl: string | null
     servicesRestorationUrl: string | null
-    servicesGuidanceUrl: string | null
-    aboutStoryUrl: string | null
-    aboutVisualBreakUrl: string | null
-    updatedAt: Date | null
+    businessHoursMon: string | null
+    businessHoursTue: string | null
+    businessHoursWed: string | null
+    businessHoursThu: string | null
+    businessHoursFri: string | null
+    businessHoursSat: string | null
+    businessHoursSun: string | null
   }
 
   export type SiteSettingCountAggregateOutputType = {
@@ -7944,20 +7958,27 @@ export namespace Prisma {
     instagram: number
     logoUrl: number
     heroImageUrl: number
+    updatedAt: number
+    aboutStoryUrl: number
+    aboutVisualBreakUrl: number
     introImageUrl: number
     portfolioProject1Url: number
     portfolioProject2Url: number
     portfolioProject3Url: number
-    servicesMachiningUrl: number
-    servicesRepairUrl: number
     servicesFabricationUrl: number
+    servicesMachiningUrl: number
     servicesModificationUrl: number
+    servicesRepairUrl: number
+    servicesGuidanceUrl: number
     servicesManufacturingUrl: number
     servicesRestorationUrl: number
-    servicesGuidanceUrl: number
-    aboutStoryUrl: number
-    aboutVisualBreakUrl: number
-    updatedAt: number
+    businessHoursMon: number
+    businessHoursTue: number
+    businessHoursWed: number
+    businessHoursThu: number
+    businessHoursFri: number
+    businessHoursSat: number
+    businessHoursSun: number
     _all: number
   }
 
@@ -7974,20 +7995,27 @@ export namespace Prisma {
     instagram?: true
     logoUrl?: true
     heroImageUrl?: true
+    updatedAt?: true
+    aboutStoryUrl?: true
+    aboutVisualBreakUrl?: true
     introImageUrl?: true
     portfolioProject1Url?: true
     portfolioProject2Url?: true
     portfolioProject3Url?: true
-    servicesMachiningUrl?: true
-    servicesRepairUrl?: true
     servicesFabricationUrl?: true
+    servicesMachiningUrl?: true
     servicesModificationUrl?: true
+    servicesRepairUrl?: true
+    servicesGuidanceUrl?: true
     servicesManufacturingUrl?: true
     servicesRestorationUrl?: true
-    servicesGuidanceUrl?: true
-    aboutStoryUrl?: true
-    aboutVisualBreakUrl?: true
-    updatedAt?: true
+    businessHoursMon?: true
+    businessHoursTue?: true
+    businessHoursWed?: true
+    businessHoursThu?: true
+    businessHoursFri?: true
+    businessHoursSat?: true
+    businessHoursSun?: true
   }
 
   export type SiteSettingMaxAggregateInputType = {
@@ -8002,20 +8030,27 @@ export namespace Prisma {
     instagram?: true
     logoUrl?: true
     heroImageUrl?: true
+    updatedAt?: true
+    aboutStoryUrl?: true
+    aboutVisualBreakUrl?: true
     introImageUrl?: true
     portfolioProject1Url?: true
     portfolioProject2Url?: true
     portfolioProject3Url?: true
-    servicesMachiningUrl?: true
-    servicesRepairUrl?: true
     servicesFabricationUrl?: true
+    servicesMachiningUrl?: true
     servicesModificationUrl?: true
+    servicesRepairUrl?: true
+    servicesGuidanceUrl?: true
     servicesManufacturingUrl?: true
     servicesRestorationUrl?: true
-    servicesGuidanceUrl?: true
-    aboutStoryUrl?: true
-    aboutVisualBreakUrl?: true
-    updatedAt?: true
+    businessHoursMon?: true
+    businessHoursTue?: true
+    businessHoursWed?: true
+    businessHoursThu?: true
+    businessHoursFri?: true
+    businessHoursSat?: true
+    businessHoursSun?: true
   }
 
   export type SiteSettingCountAggregateInputType = {
@@ -8030,20 +8065,27 @@ export namespace Prisma {
     instagram?: true
     logoUrl?: true
     heroImageUrl?: true
+    updatedAt?: true
+    aboutStoryUrl?: true
+    aboutVisualBreakUrl?: true
     introImageUrl?: true
     portfolioProject1Url?: true
     portfolioProject2Url?: true
     portfolioProject3Url?: true
-    servicesMachiningUrl?: true
-    servicesRepairUrl?: true
     servicesFabricationUrl?: true
+    servicesMachiningUrl?: true
     servicesModificationUrl?: true
+    servicesRepairUrl?: true
+    servicesGuidanceUrl?: true
     servicesManufacturingUrl?: true
     servicesRestorationUrl?: true
-    servicesGuidanceUrl?: true
-    aboutStoryUrl?: true
-    aboutVisualBreakUrl?: true
-    updatedAt?: true
+    businessHoursMon?: true
+    businessHoursTue?: true
+    businessHoursWed?: true
+    businessHoursThu?: true
+    businessHoursFri?: true
+    businessHoursSat?: true
+    businessHoursSun?: true
     _all?: true
   }
 
@@ -8131,20 +8173,27 @@ export namespace Prisma {
     instagram: string | null
     logoUrl: string | null
     heroImageUrl: string | null
+    updatedAt: Date
+    aboutStoryUrl: string | null
+    aboutVisualBreakUrl: string | null
     introImageUrl: string | null
     portfolioProject1Url: string | null
     portfolioProject2Url: string | null
     portfolioProject3Url: string | null
-    servicesMachiningUrl: string | null
-    servicesRepairUrl: string | null
     servicesFabricationUrl: string | null
+    servicesMachiningUrl: string | null
     servicesModificationUrl: string | null
+    servicesRepairUrl: string | null
+    servicesGuidanceUrl: string | null
     servicesManufacturingUrl: string | null
     servicesRestorationUrl: string | null
-    servicesGuidanceUrl: string | null
-    aboutStoryUrl: string | null
-    aboutVisualBreakUrl: string | null
-    updatedAt: Date
+    businessHoursMon: string
+    businessHoursTue: string
+    businessHoursWed: string
+    businessHoursThu: string
+    businessHoursFri: string
+    businessHoursSat: string
+    businessHoursSun: string
     _count: SiteSettingCountAggregateOutputType | null
     _min: SiteSettingMinAggregateOutputType | null
     _max: SiteSettingMaxAggregateOutputType | null
@@ -8176,20 +8225,27 @@ export namespace Prisma {
     instagram?: boolean
     logoUrl?: boolean
     heroImageUrl?: boolean
+    updatedAt?: boolean
+    aboutStoryUrl?: boolean
+    aboutVisualBreakUrl?: boolean
     introImageUrl?: boolean
     portfolioProject1Url?: boolean
     portfolioProject2Url?: boolean
     portfolioProject3Url?: boolean
-    servicesMachiningUrl?: boolean
-    servicesRepairUrl?: boolean
     servicesFabricationUrl?: boolean
+    servicesMachiningUrl?: boolean
     servicesModificationUrl?: boolean
+    servicesRepairUrl?: boolean
+    servicesGuidanceUrl?: boolean
     servicesManufacturingUrl?: boolean
     servicesRestorationUrl?: boolean
-    servicesGuidanceUrl?: boolean
-    aboutStoryUrl?: boolean
-    aboutVisualBreakUrl?: boolean
-    updatedAt?: boolean
+    businessHoursMon?: boolean
+    businessHoursTue?: boolean
+    businessHoursWed?: boolean
+    businessHoursThu?: boolean
+    businessHoursFri?: boolean
+    businessHoursSat?: boolean
+    businessHoursSun?: boolean
   }, ExtArgs["result"]["siteSetting"]>
 
   export type SiteSettingSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -8204,20 +8260,27 @@ export namespace Prisma {
     instagram?: boolean
     logoUrl?: boolean
     heroImageUrl?: boolean
+    updatedAt?: boolean
+    aboutStoryUrl?: boolean
+    aboutVisualBreakUrl?: boolean
     introImageUrl?: boolean
     portfolioProject1Url?: boolean
     portfolioProject2Url?: boolean
     portfolioProject3Url?: boolean
-    servicesMachiningUrl?: boolean
-    servicesRepairUrl?: boolean
     servicesFabricationUrl?: boolean
+    servicesMachiningUrl?: boolean
     servicesModificationUrl?: boolean
+    servicesRepairUrl?: boolean
+    servicesGuidanceUrl?: boolean
     servicesManufacturingUrl?: boolean
     servicesRestorationUrl?: boolean
-    servicesGuidanceUrl?: boolean
-    aboutStoryUrl?: boolean
-    aboutVisualBreakUrl?: boolean
-    updatedAt?: boolean
+    businessHoursMon?: boolean
+    businessHoursTue?: boolean
+    businessHoursWed?: boolean
+    businessHoursThu?: boolean
+    businessHoursFri?: boolean
+    businessHoursSat?: boolean
+    businessHoursSun?: boolean
   }, ExtArgs["result"]["siteSetting"]>
 
   export type SiteSettingSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -8232,20 +8295,27 @@ export namespace Prisma {
     instagram?: boolean
     logoUrl?: boolean
     heroImageUrl?: boolean
+    updatedAt?: boolean
+    aboutStoryUrl?: boolean
+    aboutVisualBreakUrl?: boolean
     introImageUrl?: boolean
     portfolioProject1Url?: boolean
     portfolioProject2Url?: boolean
     portfolioProject3Url?: boolean
-    servicesMachiningUrl?: boolean
-    servicesRepairUrl?: boolean
     servicesFabricationUrl?: boolean
+    servicesMachiningUrl?: boolean
     servicesModificationUrl?: boolean
+    servicesRepairUrl?: boolean
+    servicesGuidanceUrl?: boolean
     servicesManufacturingUrl?: boolean
     servicesRestorationUrl?: boolean
-    servicesGuidanceUrl?: boolean
-    aboutStoryUrl?: boolean
-    aboutVisualBreakUrl?: boolean
-    updatedAt?: boolean
+    businessHoursMon?: boolean
+    businessHoursTue?: boolean
+    businessHoursWed?: boolean
+    businessHoursThu?: boolean
+    businessHoursFri?: boolean
+    businessHoursSat?: boolean
+    businessHoursSun?: boolean
   }, ExtArgs["result"]["siteSetting"]>
 
   export type SiteSettingSelectScalar = {
@@ -8260,23 +8330,30 @@ export namespace Prisma {
     instagram?: boolean
     logoUrl?: boolean
     heroImageUrl?: boolean
+    updatedAt?: boolean
+    aboutStoryUrl?: boolean
+    aboutVisualBreakUrl?: boolean
     introImageUrl?: boolean
     portfolioProject1Url?: boolean
     portfolioProject2Url?: boolean
     portfolioProject3Url?: boolean
-    servicesMachiningUrl?: boolean
-    servicesRepairUrl?: boolean
     servicesFabricationUrl?: boolean
+    servicesMachiningUrl?: boolean
     servicesModificationUrl?: boolean
+    servicesRepairUrl?: boolean
+    servicesGuidanceUrl?: boolean
     servicesManufacturingUrl?: boolean
     servicesRestorationUrl?: boolean
-    servicesGuidanceUrl?: boolean
-    aboutStoryUrl?: boolean
-    aboutVisualBreakUrl?: boolean
-    updatedAt?: boolean
+    businessHoursMon?: boolean
+    businessHoursTue?: boolean
+    businessHoursWed?: boolean
+    businessHoursThu?: boolean
+    businessHoursFri?: boolean
+    businessHoursSat?: boolean
+    businessHoursSun?: boolean
   }
 
-  export type SiteSettingOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "siteName" | "address" | "email" | "phone" | "whatsapp" | "facebook" | "linkedin" | "instagram" | "logoUrl" | "heroImageUrl" | "introImageUrl" | "portfolioProject1Url" | "portfolioProject2Url" | "portfolioProject3Url" | "servicesMachiningUrl" | "servicesRepairUrl" | "servicesFabricationUrl" | "servicesModificationUrl" | "servicesManufacturingUrl" | "servicesRestorationUrl" | "servicesGuidanceUrl" | "aboutStoryUrl" | "aboutVisualBreakUrl" | "updatedAt", ExtArgs["result"]["siteSetting"]>
+  export type SiteSettingOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "siteName" | "address" | "email" | "phone" | "whatsapp" | "facebook" | "linkedin" | "instagram" | "logoUrl" | "heroImageUrl" | "updatedAt" | "aboutStoryUrl" | "aboutVisualBreakUrl" | "introImageUrl" | "portfolioProject1Url" | "portfolioProject2Url" | "portfolioProject3Url" | "servicesFabricationUrl" | "servicesMachiningUrl" | "servicesModificationUrl" | "servicesRepairUrl" | "servicesGuidanceUrl" | "servicesManufacturingUrl" | "servicesRestorationUrl" | "businessHoursMon" | "businessHoursTue" | "businessHoursWed" | "businessHoursThu" | "businessHoursFri" | "businessHoursSat" | "businessHoursSun", ExtArgs["result"]["siteSetting"]>
 
   export type $SiteSettingPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "SiteSetting"
@@ -8293,20 +8370,27 @@ export namespace Prisma {
       instagram: string | null
       logoUrl: string | null
       heroImageUrl: string | null
+      updatedAt: Date
+      aboutStoryUrl: string | null
+      aboutVisualBreakUrl: string | null
       introImageUrl: string | null
       portfolioProject1Url: string | null
       portfolioProject2Url: string | null
       portfolioProject3Url: string | null
-      servicesMachiningUrl: string | null
-      servicesRepairUrl: string | null
       servicesFabricationUrl: string | null
+      servicesMachiningUrl: string | null
       servicesModificationUrl: string | null
+      servicesRepairUrl: string | null
+      servicesGuidanceUrl: string | null
       servicesManufacturingUrl: string | null
       servicesRestorationUrl: string | null
-      servicesGuidanceUrl: string | null
-      aboutStoryUrl: string | null
-      aboutVisualBreakUrl: string | null
-      updatedAt: Date
+      businessHoursMon: string
+      businessHoursTue: string
+      businessHoursWed: string
+      businessHoursThu: string
+      businessHoursFri: string
+      businessHoursSat: string
+      businessHoursSun: string
     }, ExtArgs["result"]["siteSetting"]>
     composites: {}
   }
@@ -8741,20 +8825,27 @@ export namespace Prisma {
     readonly instagram: FieldRef<"SiteSetting", 'String'>
     readonly logoUrl: FieldRef<"SiteSetting", 'String'>
     readonly heroImageUrl: FieldRef<"SiteSetting", 'String'>
+    readonly updatedAt: FieldRef<"SiteSetting", 'DateTime'>
+    readonly aboutStoryUrl: FieldRef<"SiteSetting", 'String'>
+    readonly aboutVisualBreakUrl: FieldRef<"SiteSetting", 'String'>
     readonly introImageUrl: FieldRef<"SiteSetting", 'String'>
     readonly portfolioProject1Url: FieldRef<"SiteSetting", 'String'>
     readonly portfolioProject2Url: FieldRef<"SiteSetting", 'String'>
     readonly portfolioProject3Url: FieldRef<"SiteSetting", 'String'>
-    readonly servicesMachiningUrl: FieldRef<"SiteSetting", 'String'>
-    readonly servicesRepairUrl: FieldRef<"SiteSetting", 'String'>
     readonly servicesFabricationUrl: FieldRef<"SiteSetting", 'String'>
+    readonly servicesMachiningUrl: FieldRef<"SiteSetting", 'String'>
     readonly servicesModificationUrl: FieldRef<"SiteSetting", 'String'>
+    readonly servicesRepairUrl: FieldRef<"SiteSetting", 'String'>
+    readonly servicesGuidanceUrl: FieldRef<"SiteSetting", 'String'>
     readonly servicesManufacturingUrl: FieldRef<"SiteSetting", 'String'>
     readonly servicesRestorationUrl: FieldRef<"SiteSetting", 'String'>
-    readonly servicesGuidanceUrl: FieldRef<"SiteSetting", 'String'>
-    readonly aboutStoryUrl: FieldRef<"SiteSetting", 'String'>
-    readonly aboutVisualBreakUrl: FieldRef<"SiteSetting", 'String'>
-    readonly updatedAt: FieldRef<"SiteSetting", 'DateTime'>
+    readonly businessHoursMon: FieldRef<"SiteSetting", 'String'>
+    readonly businessHoursTue: FieldRef<"SiteSetting", 'String'>
+    readonly businessHoursWed: FieldRef<"SiteSetting", 'String'>
+    readonly businessHoursThu: FieldRef<"SiteSetting", 'String'>
+    readonly businessHoursFri: FieldRef<"SiteSetting", 'String'>
+    readonly businessHoursSat: FieldRef<"SiteSetting", 'String'>
+    readonly businessHoursSun: FieldRef<"SiteSetting", 'String'>
   }
     
 
@@ -9150,13 +9241,13 @@ export namespace Prisma {
 
   export const ProjectScalarFieldEnum: {
     id: 'id',
-    title: 'title',
-    description: 'description',
     category: 'category',
     imageUrl: 'imageUrl',
     publicId: 'publicId',
     createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+    updatedAt: 'updatedAt',
+    title: 'title',
+    description: 'description'
   };
 
   export type ProjectScalarFieldEnum = (typeof ProjectScalarFieldEnum)[keyof typeof ProjectScalarFieldEnum]
@@ -9164,11 +9255,11 @@ export namespace Prisma {
 
   export const ServiceScalarFieldEnum: {
     id: 'id',
-    title: 'title',
-    description: 'description',
     icon: 'icon',
     createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+    updatedAt: 'updatedAt',
+    title: 'title',
+    description: 'description'
   };
 
   export type ServiceScalarFieldEnum = (typeof ServiceScalarFieldEnum)[keyof typeof ServiceScalarFieldEnum]
@@ -9192,16 +9283,16 @@ export namespace Prisma {
 
   export const JobListingScalarFieldEnum: {
     id: 'id',
-    title: 'title',
     department: 'department',
     location: 'location',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt',
     jobType: 'jobType',
     salaryRange: 'salaryRange',
-    description: 'description',
-    requirements: 'requirements',
     status: 'status',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+    title: 'title',
+    description: 'description',
+    requirements: 'requirements'
   };
 
   export type JobListingScalarFieldEnum = (typeof JobListingScalarFieldEnum)[keyof typeof JobListingScalarFieldEnum]
@@ -9213,12 +9304,12 @@ export namespace Prisma {
     email: 'email',
     phone: 'phone',
     cvUrl: 'cvUrl',
+    jobId: 'jobId',
+    createdAt: 'createdAt',
     message: 'message',
     notes: 'notes',
-    jobId: 'jobId',
-    status: 'status',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+    updatedAt: 'updatedAt',
+    status: 'status'
   };
 
   export type ApplicationScalarFieldEnum = (typeof ApplicationScalarFieldEnum)[keyof typeof ApplicationScalarFieldEnum]
@@ -9236,20 +9327,27 @@ export namespace Prisma {
     instagram: 'instagram',
     logoUrl: 'logoUrl',
     heroImageUrl: 'heroImageUrl',
+    updatedAt: 'updatedAt',
+    aboutStoryUrl: 'aboutStoryUrl',
+    aboutVisualBreakUrl: 'aboutVisualBreakUrl',
     introImageUrl: 'introImageUrl',
     portfolioProject1Url: 'portfolioProject1Url',
     portfolioProject2Url: 'portfolioProject2Url',
     portfolioProject3Url: 'portfolioProject3Url',
-    servicesMachiningUrl: 'servicesMachiningUrl',
-    servicesRepairUrl: 'servicesRepairUrl',
     servicesFabricationUrl: 'servicesFabricationUrl',
+    servicesMachiningUrl: 'servicesMachiningUrl',
     servicesModificationUrl: 'servicesModificationUrl',
+    servicesRepairUrl: 'servicesRepairUrl',
+    servicesGuidanceUrl: 'servicesGuidanceUrl',
     servicesManufacturingUrl: 'servicesManufacturingUrl',
     servicesRestorationUrl: 'servicesRestorationUrl',
-    servicesGuidanceUrl: 'servicesGuidanceUrl',
-    aboutStoryUrl: 'aboutStoryUrl',
-    aboutVisualBreakUrl: 'aboutVisualBreakUrl',
-    updatedAt: 'updatedAt'
+    businessHoursMon: 'businessHoursMon',
+    businessHoursTue: 'businessHoursTue',
+    businessHoursWed: 'businessHoursWed',
+    businessHoursThu: 'businessHoursThu',
+    businessHoursFri: 'businessHoursFri',
+    businessHoursSat: 'businessHoursSat',
+    businessHoursSun: 'businessHoursSun'
   };
 
   export type SiteSettingScalarFieldEnum = (typeof SiteSettingScalarFieldEnum)[keyof typeof SiteSettingScalarFieldEnum]
@@ -9468,24 +9566,24 @@ export namespace Prisma {
     OR?: ProjectWhereInput[]
     NOT?: ProjectWhereInput | ProjectWhereInput[]
     id?: StringFilter<"Project"> | string
-    title?: JsonFilter<"Project">
-    description?: JsonFilter<"Project">
     category?: StringFilter<"Project"> | string
     imageUrl?: StringFilter<"Project"> | string
     publicId?: StringFilter<"Project"> | string
     createdAt?: DateTimeFilter<"Project"> | Date | string
     updatedAt?: DateTimeFilter<"Project"> | Date | string
+    title?: JsonFilter<"Project">
+    description?: JsonFilter<"Project">
   }
 
   export type ProjectOrderByWithRelationInput = {
     id?: SortOrder
-    title?: SortOrder
-    description?: SortOrder
     category?: SortOrder
     imageUrl?: SortOrder
     publicId?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
   }
 
   export type ProjectWhereUniqueInput = Prisma.AtLeast<{
@@ -9493,24 +9591,24 @@ export namespace Prisma {
     AND?: ProjectWhereInput | ProjectWhereInput[]
     OR?: ProjectWhereInput[]
     NOT?: ProjectWhereInput | ProjectWhereInput[]
-    title?: JsonFilter<"Project">
-    description?: JsonFilter<"Project">
     category?: StringFilter<"Project"> | string
     imageUrl?: StringFilter<"Project"> | string
     publicId?: StringFilter<"Project"> | string
     createdAt?: DateTimeFilter<"Project"> | Date | string
     updatedAt?: DateTimeFilter<"Project"> | Date | string
+    title?: JsonFilter<"Project">
+    description?: JsonFilter<"Project">
   }, "id">
 
   export type ProjectOrderByWithAggregationInput = {
     id?: SortOrder
-    title?: SortOrder
-    description?: SortOrder
     category?: SortOrder
     imageUrl?: SortOrder
     publicId?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
     _count?: ProjectCountOrderByAggregateInput
     _max?: ProjectMaxOrderByAggregateInput
     _min?: ProjectMinOrderByAggregateInput
@@ -9521,13 +9619,13 @@ export namespace Prisma {
     OR?: ProjectScalarWhereWithAggregatesInput[]
     NOT?: ProjectScalarWhereWithAggregatesInput | ProjectScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"Project"> | string
-    title?: JsonWithAggregatesFilter<"Project">
-    description?: JsonWithAggregatesFilter<"Project">
     category?: StringWithAggregatesFilter<"Project"> | string
     imageUrl?: StringWithAggregatesFilter<"Project"> | string
     publicId?: StringWithAggregatesFilter<"Project"> | string
     createdAt?: DateTimeWithAggregatesFilter<"Project"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Project"> | Date | string
+    title?: JsonWithAggregatesFilter<"Project">
+    description?: JsonWithAggregatesFilter<"Project">
   }
 
   export type ServiceWhereInput = {
@@ -9535,20 +9633,20 @@ export namespace Prisma {
     OR?: ServiceWhereInput[]
     NOT?: ServiceWhereInput | ServiceWhereInput[]
     id?: StringFilter<"Service"> | string
-    title?: JsonFilter<"Service">
-    description?: JsonFilter<"Service">
     icon?: StringNullableFilter<"Service"> | string | null
     createdAt?: DateTimeFilter<"Service"> | Date | string
     updatedAt?: DateTimeFilter<"Service"> | Date | string
+    title?: JsonFilter<"Service">
+    description?: JsonFilter<"Service">
   }
 
   export type ServiceOrderByWithRelationInput = {
     id?: SortOrder
-    title?: SortOrder
-    description?: SortOrder
     icon?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
   }
 
   export type ServiceWhereUniqueInput = Prisma.AtLeast<{
@@ -9556,20 +9654,20 @@ export namespace Prisma {
     AND?: ServiceWhereInput | ServiceWhereInput[]
     OR?: ServiceWhereInput[]
     NOT?: ServiceWhereInput | ServiceWhereInput[]
-    title?: JsonFilter<"Service">
-    description?: JsonFilter<"Service">
     icon?: StringNullableFilter<"Service"> | string | null
     createdAt?: DateTimeFilter<"Service"> | Date | string
     updatedAt?: DateTimeFilter<"Service"> | Date | string
+    title?: JsonFilter<"Service">
+    description?: JsonFilter<"Service">
   }, "id">
 
   export type ServiceOrderByWithAggregationInput = {
     id?: SortOrder
-    title?: SortOrder
-    description?: SortOrder
     icon?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
     _count?: ServiceCountOrderByAggregateInput
     _max?: ServiceMaxOrderByAggregateInput
     _min?: ServiceMinOrderByAggregateInput
@@ -9580,11 +9678,11 @@ export namespace Prisma {
     OR?: ServiceScalarWhereWithAggregatesInput[]
     NOT?: ServiceScalarWhereWithAggregatesInput | ServiceScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"Service"> | string
-    title?: JsonWithAggregatesFilter<"Service">
-    description?: JsonWithAggregatesFilter<"Service">
     icon?: StringNullableWithAggregatesFilter<"Service"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"Service"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Service"> | Date | string
+    title?: JsonWithAggregatesFilter<"Service">
+    description?: JsonWithAggregatesFilter<"Service">
   }
 
   export type QuoteRequestWhereInput = {
@@ -9669,31 +9767,31 @@ export namespace Prisma {
     OR?: JobListingWhereInput[]
     NOT?: JobListingWhereInput | JobListingWhereInput[]
     id?: StringFilter<"JobListing"> | string
-    title?: JsonFilter<"JobListing">
     department?: StringFilter<"JobListing"> | string
     location?: StringFilter<"JobListing"> | string
-    jobType?: EnumJobTypeFilter<"JobListing"> | $Enums.JobType
-    salaryRange?: StringNullableFilter<"JobListing"> | string | null
-    description?: JsonFilter<"JobListing">
-    requirements?: JsonFilter<"JobListing">
-    status?: EnumJobStatusFilter<"JobListing"> | $Enums.JobStatus
     createdAt?: DateTimeFilter<"JobListing"> | Date | string
     updatedAt?: DateTimeFilter<"JobListing"> | Date | string
+    jobType?: EnumJobTypeFilter<"JobListing"> | $Enums.JobType
+    salaryRange?: StringNullableFilter<"JobListing"> | string | null
+    status?: EnumJobStatusFilter<"JobListing"> | $Enums.JobStatus
+    title?: JsonFilter<"JobListing">
+    description?: JsonFilter<"JobListing">
+    requirements?: JsonFilter<"JobListing">
     applications?: ApplicationListRelationFilter
   }
 
   export type JobListingOrderByWithRelationInput = {
     id?: SortOrder
-    title?: SortOrder
     department?: SortOrder
     location?: SortOrder
-    jobType?: SortOrder
-    salaryRange?: SortOrderInput | SortOrder
-    description?: SortOrder
-    requirements?: SortOrder
-    status?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    jobType?: SortOrder
+    salaryRange?: SortOrderInput | SortOrder
+    status?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    requirements?: SortOrder
     applications?: ApplicationOrderByRelationAggregateInput
   }
 
@@ -9702,31 +9800,31 @@ export namespace Prisma {
     AND?: JobListingWhereInput | JobListingWhereInput[]
     OR?: JobListingWhereInput[]
     NOT?: JobListingWhereInput | JobListingWhereInput[]
-    title?: JsonFilter<"JobListing">
     department?: StringFilter<"JobListing"> | string
     location?: StringFilter<"JobListing"> | string
-    jobType?: EnumJobTypeFilter<"JobListing"> | $Enums.JobType
-    salaryRange?: StringNullableFilter<"JobListing"> | string | null
-    description?: JsonFilter<"JobListing">
-    requirements?: JsonFilter<"JobListing">
-    status?: EnumJobStatusFilter<"JobListing"> | $Enums.JobStatus
     createdAt?: DateTimeFilter<"JobListing"> | Date | string
     updatedAt?: DateTimeFilter<"JobListing"> | Date | string
+    jobType?: EnumJobTypeFilter<"JobListing"> | $Enums.JobType
+    salaryRange?: StringNullableFilter<"JobListing"> | string | null
+    status?: EnumJobStatusFilter<"JobListing"> | $Enums.JobStatus
+    title?: JsonFilter<"JobListing">
+    description?: JsonFilter<"JobListing">
+    requirements?: JsonFilter<"JobListing">
     applications?: ApplicationListRelationFilter
   }, "id">
 
   export type JobListingOrderByWithAggregationInput = {
     id?: SortOrder
-    title?: SortOrder
     department?: SortOrder
     location?: SortOrder
-    jobType?: SortOrder
-    salaryRange?: SortOrderInput | SortOrder
-    description?: SortOrder
-    requirements?: SortOrder
-    status?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    jobType?: SortOrder
+    salaryRange?: SortOrderInput | SortOrder
+    status?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    requirements?: SortOrder
     _count?: JobListingCountOrderByAggregateInput
     _max?: JobListingMaxOrderByAggregateInput
     _min?: JobListingMinOrderByAggregateInput
@@ -9737,16 +9835,16 @@ export namespace Prisma {
     OR?: JobListingScalarWhereWithAggregatesInput[]
     NOT?: JobListingScalarWhereWithAggregatesInput | JobListingScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"JobListing"> | string
-    title?: JsonWithAggregatesFilter<"JobListing">
     department?: StringWithAggregatesFilter<"JobListing"> | string
     location?: StringWithAggregatesFilter<"JobListing"> | string
-    jobType?: EnumJobTypeWithAggregatesFilter<"JobListing"> | $Enums.JobType
-    salaryRange?: StringNullableWithAggregatesFilter<"JobListing"> | string | null
-    description?: JsonWithAggregatesFilter<"JobListing">
-    requirements?: JsonWithAggregatesFilter<"JobListing">
-    status?: EnumJobStatusWithAggregatesFilter<"JobListing"> | $Enums.JobStatus
     createdAt?: DateTimeWithAggregatesFilter<"JobListing"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"JobListing"> | Date | string
+    jobType?: EnumJobTypeWithAggregatesFilter<"JobListing"> | $Enums.JobType
+    salaryRange?: StringNullableWithAggregatesFilter<"JobListing"> | string | null
+    status?: EnumJobStatusWithAggregatesFilter<"JobListing"> | $Enums.JobStatus
+    title?: JsonWithAggregatesFilter<"JobListing">
+    description?: JsonWithAggregatesFilter<"JobListing">
+    requirements?: JsonWithAggregatesFilter<"JobListing">
   }
 
   export type ApplicationWhereInput = {
@@ -9758,12 +9856,12 @@ export namespace Prisma {
     email?: StringFilter<"Application"> | string
     phone?: StringFilter<"Application"> | string
     cvUrl?: StringFilter<"Application"> | string
+    jobId?: StringFilter<"Application"> | string
+    createdAt?: DateTimeFilter<"Application"> | Date | string
     message?: StringNullableFilter<"Application"> | string | null
     notes?: StringNullableFilter<"Application"> | string | null
-    jobId?: StringFilter<"Application"> | string
-    status?: EnumApplicationStatusFilter<"Application"> | $Enums.ApplicationStatus
-    createdAt?: DateTimeFilter<"Application"> | Date | string
     updatedAt?: DateTimeFilter<"Application"> | Date | string
+    status?: EnumApplicationStatusFilter<"Application"> | $Enums.ApplicationStatus
     job?: XOR<JobListingScalarRelationFilter, JobListingWhereInput>
   }
 
@@ -9773,12 +9871,12 @@ export namespace Prisma {
     email?: SortOrder
     phone?: SortOrder
     cvUrl?: SortOrder
+    jobId?: SortOrder
+    createdAt?: SortOrder
     message?: SortOrderInput | SortOrder
     notes?: SortOrderInput | SortOrder
-    jobId?: SortOrder
-    status?: SortOrder
-    createdAt?: SortOrder
     updatedAt?: SortOrder
+    status?: SortOrder
     job?: JobListingOrderByWithRelationInput
   }
 
@@ -9791,12 +9889,12 @@ export namespace Prisma {
     email?: StringFilter<"Application"> | string
     phone?: StringFilter<"Application"> | string
     cvUrl?: StringFilter<"Application"> | string
+    jobId?: StringFilter<"Application"> | string
+    createdAt?: DateTimeFilter<"Application"> | Date | string
     message?: StringNullableFilter<"Application"> | string | null
     notes?: StringNullableFilter<"Application"> | string | null
-    jobId?: StringFilter<"Application"> | string
-    status?: EnumApplicationStatusFilter<"Application"> | $Enums.ApplicationStatus
-    createdAt?: DateTimeFilter<"Application"> | Date | string
     updatedAt?: DateTimeFilter<"Application"> | Date | string
+    status?: EnumApplicationStatusFilter<"Application"> | $Enums.ApplicationStatus
     job?: XOR<JobListingScalarRelationFilter, JobListingWhereInput>
   }, "id">
 
@@ -9806,12 +9904,12 @@ export namespace Prisma {
     email?: SortOrder
     phone?: SortOrder
     cvUrl?: SortOrder
+    jobId?: SortOrder
+    createdAt?: SortOrder
     message?: SortOrderInput | SortOrder
     notes?: SortOrderInput | SortOrder
-    jobId?: SortOrder
-    status?: SortOrder
-    createdAt?: SortOrder
     updatedAt?: SortOrder
+    status?: SortOrder
     _count?: ApplicationCountOrderByAggregateInput
     _max?: ApplicationMaxOrderByAggregateInput
     _min?: ApplicationMinOrderByAggregateInput
@@ -9826,12 +9924,12 @@ export namespace Prisma {
     email?: StringWithAggregatesFilter<"Application"> | string
     phone?: StringWithAggregatesFilter<"Application"> | string
     cvUrl?: StringWithAggregatesFilter<"Application"> | string
+    jobId?: StringWithAggregatesFilter<"Application"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"Application"> | Date | string
     message?: StringNullableWithAggregatesFilter<"Application"> | string | null
     notes?: StringNullableWithAggregatesFilter<"Application"> | string | null
-    jobId?: StringWithAggregatesFilter<"Application"> | string
-    status?: EnumApplicationStatusWithAggregatesFilter<"Application"> | $Enums.ApplicationStatus
-    createdAt?: DateTimeWithAggregatesFilter<"Application"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Application"> | Date | string
+    status?: EnumApplicationStatusWithAggregatesFilter<"Application"> | $Enums.ApplicationStatus
   }
 
   export type SiteSettingWhereInput = {
@@ -9849,20 +9947,27 @@ export namespace Prisma {
     instagram?: StringNullableFilter<"SiteSetting"> | string | null
     logoUrl?: StringNullableFilter<"SiteSetting"> | string | null
     heroImageUrl?: StringNullableFilter<"SiteSetting"> | string | null
+    updatedAt?: DateTimeFilter<"SiteSetting"> | Date | string
+    aboutStoryUrl?: StringNullableFilter<"SiteSetting"> | string | null
+    aboutVisualBreakUrl?: StringNullableFilter<"SiteSetting"> | string | null
     introImageUrl?: StringNullableFilter<"SiteSetting"> | string | null
     portfolioProject1Url?: StringNullableFilter<"SiteSetting"> | string | null
     portfolioProject2Url?: StringNullableFilter<"SiteSetting"> | string | null
     portfolioProject3Url?: StringNullableFilter<"SiteSetting"> | string | null
-    servicesMachiningUrl?: StringNullableFilter<"SiteSetting"> | string | null
-    servicesRepairUrl?: StringNullableFilter<"SiteSetting"> | string | null
     servicesFabricationUrl?: StringNullableFilter<"SiteSetting"> | string | null
+    servicesMachiningUrl?: StringNullableFilter<"SiteSetting"> | string | null
     servicesModificationUrl?: StringNullableFilter<"SiteSetting"> | string | null
+    servicesRepairUrl?: StringNullableFilter<"SiteSetting"> | string | null
+    servicesGuidanceUrl?: StringNullableFilter<"SiteSetting"> | string | null
     servicesManufacturingUrl?: StringNullableFilter<"SiteSetting"> | string | null
     servicesRestorationUrl?: StringNullableFilter<"SiteSetting"> | string | null
-    servicesGuidanceUrl?: StringNullableFilter<"SiteSetting"> | string | null
-    aboutStoryUrl?: StringNullableFilter<"SiteSetting"> | string | null
-    aboutVisualBreakUrl?: StringNullableFilter<"SiteSetting"> | string | null
-    updatedAt?: DateTimeFilter<"SiteSetting"> | Date | string
+    businessHoursMon?: StringFilter<"SiteSetting"> | string
+    businessHoursTue?: StringFilter<"SiteSetting"> | string
+    businessHoursWed?: StringFilter<"SiteSetting"> | string
+    businessHoursThu?: StringFilter<"SiteSetting"> | string
+    businessHoursFri?: StringFilter<"SiteSetting"> | string
+    businessHoursSat?: StringFilter<"SiteSetting"> | string
+    businessHoursSun?: StringFilter<"SiteSetting"> | string
   }
 
   export type SiteSettingOrderByWithRelationInput = {
@@ -9877,20 +9982,27 @@ export namespace Prisma {
     instagram?: SortOrderInput | SortOrder
     logoUrl?: SortOrderInput | SortOrder
     heroImageUrl?: SortOrderInput | SortOrder
+    updatedAt?: SortOrder
+    aboutStoryUrl?: SortOrderInput | SortOrder
+    aboutVisualBreakUrl?: SortOrderInput | SortOrder
     introImageUrl?: SortOrderInput | SortOrder
     portfolioProject1Url?: SortOrderInput | SortOrder
     portfolioProject2Url?: SortOrderInput | SortOrder
     portfolioProject3Url?: SortOrderInput | SortOrder
-    servicesMachiningUrl?: SortOrderInput | SortOrder
-    servicesRepairUrl?: SortOrderInput | SortOrder
     servicesFabricationUrl?: SortOrderInput | SortOrder
+    servicesMachiningUrl?: SortOrderInput | SortOrder
     servicesModificationUrl?: SortOrderInput | SortOrder
+    servicesRepairUrl?: SortOrderInput | SortOrder
+    servicesGuidanceUrl?: SortOrderInput | SortOrder
     servicesManufacturingUrl?: SortOrderInput | SortOrder
     servicesRestorationUrl?: SortOrderInput | SortOrder
-    servicesGuidanceUrl?: SortOrderInput | SortOrder
-    aboutStoryUrl?: SortOrderInput | SortOrder
-    aboutVisualBreakUrl?: SortOrderInput | SortOrder
-    updatedAt?: SortOrder
+    businessHoursMon?: SortOrder
+    businessHoursTue?: SortOrder
+    businessHoursWed?: SortOrder
+    businessHoursThu?: SortOrder
+    businessHoursFri?: SortOrder
+    businessHoursSat?: SortOrder
+    businessHoursSun?: SortOrder
   }
 
   export type SiteSettingWhereUniqueInput = Prisma.AtLeast<{
@@ -9908,20 +10020,27 @@ export namespace Prisma {
     instagram?: StringNullableFilter<"SiteSetting"> | string | null
     logoUrl?: StringNullableFilter<"SiteSetting"> | string | null
     heroImageUrl?: StringNullableFilter<"SiteSetting"> | string | null
+    updatedAt?: DateTimeFilter<"SiteSetting"> | Date | string
+    aboutStoryUrl?: StringNullableFilter<"SiteSetting"> | string | null
+    aboutVisualBreakUrl?: StringNullableFilter<"SiteSetting"> | string | null
     introImageUrl?: StringNullableFilter<"SiteSetting"> | string | null
     portfolioProject1Url?: StringNullableFilter<"SiteSetting"> | string | null
     portfolioProject2Url?: StringNullableFilter<"SiteSetting"> | string | null
     portfolioProject3Url?: StringNullableFilter<"SiteSetting"> | string | null
-    servicesMachiningUrl?: StringNullableFilter<"SiteSetting"> | string | null
-    servicesRepairUrl?: StringNullableFilter<"SiteSetting"> | string | null
     servicesFabricationUrl?: StringNullableFilter<"SiteSetting"> | string | null
+    servicesMachiningUrl?: StringNullableFilter<"SiteSetting"> | string | null
     servicesModificationUrl?: StringNullableFilter<"SiteSetting"> | string | null
+    servicesRepairUrl?: StringNullableFilter<"SiteSetting"> | string | null
+    servicesGuidanceUrl?: StringNullableFilter<"SiteSetting"> | string | null
     servicesManufacturingUrl?: StringNullableFilter<"SiteSetting"> | string | null
     servicesRestorationUrl?: StringNullableFilter<"SiteSetting"> | string | null
-    servicesGuidanceUrl?: StringNullableFilter<"SiteSetting"> | string | null
-    aboutStoryUrl?: StringNullableFilter<"SiteSetting"> | string | null
-    aboutVisualBreakUrl?: StringNullableFilter<"SiteSetting"> | string | null
-    updatedAt?: DateTimeFilter<"SiteSetting"> | Date | string
+    businessHoursMon?: StringFilter<"SiteSetting"> | string
+    businessHoursTue?: StringFilter<"SiteSetting"> | string
+    businessHoursWed?: StringFilter<"SiteSetting"> | string
+    businessHoursThu?: StringFilter<"SiteSetting"> | string
+    businessHoursFri?: StringFilter<"SiteSetting"> | string
+    businessHoursSat?: StringFilter<"SiteSetting"> | string
+    businessHoursSun?: StringFilter<"SiteSetting"> | string
   }, "id">
 
   export type SiteSettingOrderByWithAggregationInput = {
@@ -9936,20 +10055,27 @@ export namespace Prisma {
     instagram?: SortOrderInput | SortOrder
     logoUrl?: SortOrderInput | SortOrder
     heroImageUrl?: SortOrderInput | SortOrder
+    updatedAt?: SortOrder
+    aboutStoryUrl?: SortOrderInput | SortOrder
+    aboutVisualBreakUrl?: SortOrderInput | SortOrder
     introImageUrl?: SortOrderInput | SortOrder
     portfolioProject1Url?: SortOrderInput | SortOrder
     portfolioProject2Url?: SortOrderInput | SortOrder
     portfolioProject3Url?: SortOrderInput | SortOrder
-    servicesMachiningUrl?: SortOrderInput | SortOrder
-    servicesRepairUrl?: SortOrderInput | SortOrder
     servicesFabricationUrl?: SortOrderInput | SortOrder
+    servicesMachiningUrl?: SortOrderInput | SortOrder
     servicesModificationUrl?: SortOrderInput | SortOrder
+    servicesRepairUrl?: SortOrderInput | SortOrder
+    servicesGuidanceUrl?: SortOrderInput | SortOrder
     servicesManufacturingUrl?: SortOrderInput | SortOrder
     servicesRestorationUrl?: SortOrderInput | SortOrder
-    servicesGuidanceUrl?: SortOrderInput | SortOrder
-    aboutStoryUrl?: SortOrderInput | SortOrder
-    aboutVisualBreakUrl?: SortOrderInput | SortOrder
-    updatedAt?: SortOrder
+    businessHoursMon?: SortOrder
+    businessHoursTue?: SortOrder
+    businessHoursWed?: SortOrder
+    businessHoursThu?: SortOrder
+    businessHoursFri?: SortOrder
+    businessHoursSat?: SortOrder
+    businessHoursSun?: SortOrder
     _count?: SiteSettingCountOrderByAggregateInput
     _max?: SiteSettingMaxOrderByAggregateInput
     _min?: SiteSettingMinOrderByAggregateInput
@@ -9970,20 +10096,27 @@ export namespace Prisma {
     instagram?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
     logoUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
     heroImageUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
+    updatedAt?: DateTimeWithAggregatesFilter<"SiteSetting"> | Date | string
+    aboutStoryUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
+    aboutVisualBreakUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
     introImageUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
     portfolioProject1Url?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
     portfolioProject2Url?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
     portfolioProject3Url?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
-    servicesMachiningUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
-    servicesRepairUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
     servicesFabricationUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
+    servicesMachiningUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
     servicesModificationUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
+    servicesRepairUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
+    servicesGuidanceUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
     servicesManufacturingUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
     servicesRestorationUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
-    servicesGuidanceUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
-    aboutStoryUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
-    aboutVisualBreakUrl?: StringNullableWithAggregatesFilter<"SiteSetting"> | string | null
-    updatedAt?: DateTimeWithAggregatesFilter<"SiteSetting"> | Date | string
+    businessHoursMon?: StringWithAggregatesFilter<"SiteSetting"> | string
+    businessHoursTue?: StringWithAggregatesFilter<"SiteSetting"> | string
+    businessHoursWed?: StringWithAggregatesFilter<"SiteSetting"> | string
+    businessHoursThu?: StringWithAggregatesFilter<"SiteSetting"> | string
+    businessHoursFri?: StringWithAggregatesFilter<"SiteSetting"> | string
+    businessHoursSat?: StringWithAggregatesFilter<"SiteSetting"> | string
+    businessHoursSun?: StringWithAggregatesFilter<"SiteSetting"> | string
   }
 
   export type UserCreateInput = {
@@ -10058,142 +10191,142 @@ export namespace Prisma {
 
   export type ProjectCreateInput = {
     id?: string
-    title: JsonNullValueInput | InputJsonValue
-    description: JsonNullValueInput | InputJsonValue
     category: string
     imageUrl: string
     publicId: string
     createdAt?: Date | string
     updatedAt?: Date | string
+    title: JsonNullValueInput | InputJsonValue
+    description: JsonNullValueInput | InputJsonValue
   }
 
   export type ProjectUncheckedCreateInput = {
     id?: string
-    title: JsonNullValueInput | InputJsonValue
-    description: JsonNullValueInput | InputJsonValue
     category: string
     imageUrl: string
     publicId: string
     createdAt?: Date | string
     updatedAt?: Date | string
+    title: JsonNullValueInput | InputJsonValue
+    description: JsonNullValueInput | InputJsonValue
   }
 
   export type ProjectUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: JsonNullValueInput | InputJsonValue
-    description?: JsonNullValueInput | InputJsonValue
     category?: StringFieldUpdateOperationsInput | string
     imageUrl?: StringFieldUpdateOperationsInput | string
     publicId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    title?: JsonNullValueInput | InputJsonValue
+    description?: JsonNullValueInput | InputJsonValue
   }
 
   export type ProjectUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: JsonNullValueInput | InputJsonValue
-    description?: JsonNullValueInput | InputJsonValue
     category?: StringFieldUpdateOperationsInput | string
     imageUrl?: StringFieldUpdateOperationsInput | string
     publicId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    title?: JsonNullValueInput | InputJsonValue
+    description?: JsonNullValueInput | InputJsonValue
   }
 
   export type ProjectCreateManyInput = {
     id?: string
-    title: JsonNullValueInput | InputJsonValue
-    description: JsonNullValueInput | InputJsonValue
     category: string
     imageUrl: string
     publicId: string
     createdAt?: Date | string
     updatedAt?: Date | string
+    title: JsonNullValueInput | InputJsonValue
+    description: JsonNullValueInput | InputJsonValue
   }
 
   export type ProjectUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: JsonNullValueInput | InputJsonValue
-    description?: JsonNullValueInput | InputJsonValue
     category?: StringFieldUpdateOperationsInput | string
     imageUrl?: StringFieldUpdateOperationsInput | string
     publicId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    title?: JsonNullValueInput | InputJsonValue
+    description?: JsonNullValueInput | InputJsonValue
   }
 
   export type ProjectUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: JsonNullValueInput | InputJsonValue
-    description?: JsonNullValueInput | InputJsonValue
     category?: StringFieldUpdateOperationsInput | string
     imageUrl?: StringFieldUpdateOperationsInput | string
     publicId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    title?: JsonNullValueInput | InputJsonValue
+    description?: JsonNullValueInput | InputJsonValue
   }
 
   export type ServiceCreateInput = {
     id?: string
-    title: JsonNullValueInput | InputJsonValue
-    description: JsonNullValueInput | InputJsonValue
     icon?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
+    title: JsonNullValueInput | InputJsonValue
+    description: JsonNullValueInput | InputJsonValue
   }
 
   export type ServiceUncheckedCreateInput = {
     id?: string
-    title: JsonNullValueInput | InputJsonValue
-    description: JsonNullValueInput | InputJsonValue
     icon?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
+    title: JsonNullValueInput | InputJsonValue
+    description: JsonNullValueInput | InputJsonValue
   }
 
   export type ServiceUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: JsonNullValueInput | InputJsonValue
-    description?: JsonNullValueInput | InputJsonValue
     icon?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    title?: JsonNullValueInput | InputJsonValue
+    description?: JsonNullValueInput | InputJsonValue
   }
 
   export type ServiceUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: JsonNullValueInput | InputJsonValue
-    description?: JsonNullValueInput | InputJsonValue
     icon?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    title?: JsonNullValueInput | InputJsonValue
+    description?: JsonNullValueInput | InputJsonValue
   }
 
   export type ServiceCreateManyInput = {
     id?: string
-    title: JsonNullValueInput | InputJsonValue
-    description: JsonNullValueInput | InputJsonValue
     icon?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
+    title: JsonNullValueInput | InputJsonValue
+    description: JsonNullValueInput | InputJsonValue
   }
 
   export type ServiceUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: JsonNullValueInput | InputJsonValue
-    description?: JsonNullValueInput | InputJsonValue
     icon?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    title?: JsonNullValueInput | InputJsonValue
+    description?: JsonNullValueInput | InputJsonValue
   }
 
   export type ServiceUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: JsonNullValueInput | InputJsonValue
-    description?: JsonNullValueInput | InputJsonValue
     icon?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    title?: JsonNullValueInput | InputJsonValue
+    description?: JsonNullValueInput | InputJsonValue
   }
 
   export type QuoteRequestCreateInput = {
@@ -10289,104 +10422,104 @@ export namespace Prisma {
 
   export type JobListingCreateInput = {
     id?: string
-    title: JsonNullValueInput | InputJsonValue
     department: string
     location?: string
-    jobType?: $Enums.JobType
-    salaryRange?: string | null
-    description: JsonNullValueInput | InputJsonValue
-    requirements: JsonNullValueInput | InputJsonValue
-    status?: $Enums.JobStatus
     createdAt?: Date | string
     updatedAt?: Date | string
+    jobType?: $Enums.JobType
+    salaryRange?: string | null
+    status?: $Enums.JobStatus
+    title: JsonNullValueInput | InputJsonValue
+    description: JsonNullValueInput | InputJsonValue
+    requirements: JsonNullValueInput | InputJsonValue
     applications?: ApplicationCreateNestedManyWithoutJobInput
   }
 
   export type JobListingUncheckedCreateInput = {
     id?: string
-    title: JsonNullValueInput | InputJsonValue
     department: string
     location?: string
-    jobType?: $Enums.JobType
-    salaryRange?: string | null
-    description: JsonNullValueInput | InputJsonValue
-    requirements: JsonNullValueInput | InputJsonValue
-    status?: $Enums.JobStatus
     createdAt?: Date | string
     updatedAt?: Date | string
+    jobType?: $Enums.JobType
+    salaryRange?: string | null
+    status?: $Enums.JobStatus
+    title: JsonNullValueInput | InputJsonValue
+    description: JsonNullValueInput | InputJsonValue
+    requirements: JsonNullValueInput | InputJsonValue
     applications?: ApplicationUncheckedCreateNestedManyWithoutJobInput
   }
 
   export type JobListingUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: JsonNullValueInput | InputJsonValue
     department?: StringFieldUpdateOperationsInput | string
     location?: StringFieldUpdateOperationsInput | string
-    jobType?: EnumJobTypeFieldUpdateOperationsInput | $Enums.JobType
-    salaryRange?: NullableStringFieldUpdateOperationsInput | string | null
-    description?: JsonNullValueInput | InputJsonValue
-    requirements?: JsonNullValueInput | InputJsonValue
-    status?: EnumJobStatusFieldUpdateOperationsInput | $Enums.JobStatus
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    jobType?: EnumJobTypeFieldUpdateOperationsInput | $Enums.JobType
+    salaryRange?: NullableStringFieldUpdateOperationsInput | string | null
+    status?: EnumJobStatusFieldUpdateOperationsInput | $Enums.JobStatus
+    title?: JsonNullValueInput | InputJsonValue
+    description?: JsonNullValueInput | InputJsonValue
+    requirements?: JsonNullValueInput | InputJsonValue
     applications?: ApplicationUpdateManyWithoutJobNestedInput
   }
 
   export type JobListingUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: JsonNullValueInput | InputJsonValue
     department?: StringFieldUpdateOperationsInput | string
     location?: StringFieldUpdateOperationsInput | string
-    jobType?: EnumJobTypeFieldUpdateOperationsInput | $Enums.JobType
-    salaryRange?: NullableStringFieldUpdateOperationsInput | string | null
-    description?: JsonNullValueInput | InputJsonValue
-    requirements?: JsonNullValueInput | InputJsonValue
-    status?: EnumJobStatusFieldUpdateOperationsInput | $Enums.JobStatus
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    jobType?: EnumJobTypeFieldUpdateOperationsInput | $Enums.JobType
+    salaryRange?: NullableStringFieldUpdateOperationsInput | string | null
+    status?: EnumJobStatusFieldUpdateOperationsInput | $Enums.JobStatus
+    title?: JsonNullValueInput | InputJsonValue
+    description?: JsonNullValueInput | InputJsonValue
+    requirements?: JsonNullValueInput | InputJsonValue
     applications?: ApplicationUncheckedUpdateManyWithoutJobNestedInput
   }
 
   export type JobListingCreateManyInput = {
     id?: string
-    title: JsonNullValueInput | InputJsonValue
     department: string
     location?: string
-    jobType?: $Enums.JobType
-    salaryRange?: string | null
-    description: JsonNullValueInput | InputJsonValue
-    requirements: JsonNullValueInput | InputJsonValue
-    status?: $Enums.JobStatus
     createdAt?: Date | string
     updatedAt?: Date | string
+    jobType?: $Enums.JobType
+    salaryRange?: string | null
+    status?: $Enums.JobStatus
+    title: JsonNullValueInput | InputJsonValue
+    description: JsonNullValueInput | InputJsonValue
+    requirements: JsonNullValueInput | InputJsonValue
   }
 
   export type JobListingUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: JsonNullValueInput | InputJsonValue
     department?: StringFieldUpdateOperationsInput | string
     location?: StringFieldUpdateOperationsInput | string
-    jobType?: EnumJobTypeFieldUpdateOperationsInput | $Enums.JobType
-    salaryRange?: NullableStringFieldUpdateOperationsInput | string | null
-    description?: JsonNullValueInput | InputJsonValue
-    requirements?: JsonNullValueInput | InputJsonValue
-    status?: EnumJobStatusFieldUpdateOperationsInput | $Enums.JobStatus
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    jobType?: EnumJobTypeFieldUpdateOperationsInput | $Enums.JobType
+    salaryRange?: NullableStringFieldUpdateOperationsInput | string | null
+    status?: EnumJobStatusFieldUpdateOperationsInput | $Enums.JobStatus
+    title?: JsonNullValueInput | InputJsonValue
+    description?: JsonNullValueInput | InputJsonValue
+    requirements?: JsonNullValueInput | InputJsonValue
   }
 
   export type JobListingUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: JsonNullValueInput | InputJsonValue
     department?: StringFieldUpdateOperationsInput | string
     location?: StringFieldUpdateOperationsInput | string
-    jobType?: EnumJobTypeFieldUpdateOperationsInput | $Enums.JobType
-    salaryRange?: NullableStringFieldUpdateOperationsInput | string | null
-    description?: JsonNullValueInput | InputJsonValue
-    requirements?: JsonNullValueInput | InputJsonValue
-    status?: EnumJobStatusFieldUpdateOperationsInput | $Enums.JobStatus
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    jobType?: EnumJobTypeFieldUpdateOperationsInput | $Enums.JobType
+    salaryRange?: NullableStringFieldUpdateOperationsInput | string | null
+    status?: EnumJobStatusFieldUpdateOperationsInput | $Enums.JobStatus
+    title?: JsonNullValueInput | InputJsonValue
+    description?: JsonNullValueInput | InputJsonValue
+    requirements?: JsonNullValueInput | InputJsonValue
   }
 
   export type ApplicationCreateInput = {
@@ -10395,11 +10528,11 @@ export namespace Prisma {
     email: string
     phone: string
     cvUrl: string
+    createdAt?: Date | string
     message?: string | null
     notes?: string | null
-    status?: $Enums.ApplicationStatus
-    createdAt?: Date | string
     updatedAt?: Date | string
+    status?: $Enums.ApplicationStatus
     job: JobListingCreateNestedOneWithoutApplicationsInput
   }
 
@@ -10409,12 +10542,12 @@ export namespace Prisma {
     email: string
     phone: string
     cvUrl: string
+    jobId: string
+    createdAt?: Date | string
     message?: string | null
     notes?: string | null
-    jobId: string
-    status?: $Enums.ApplicationStatus
-    createdAt?: Date | string
     updatedAt?: Date | string
+    status?: $Enums.ApplicationStatus
   }
 
   export type ApplicationUpdateInput = {
@@ -10423,11 +10556,11 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
     cvUrl?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     message?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
-    status?: EnumApplicationStatusFieldUpdateOperationsInput | $Enums.ApplicationStatus
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    status?: EnumApplicationStatusFieldUpdateOperationsInput | $Enums.ApplicationStatus
     job?: JobListingUpdateOneRequiredWithoutApplicationsNestedInput
   }
 
@@ -10437,12 +10570,12 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
     cvUrl?: StringFieldUpdateOperationsInput | string
+    jobId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     message?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
-    jobId?: StringFieldUpdateOperationsInput | string
-    status?: EnumApplicationStatusFieldUpdateOperationsInput | $Enums.ApplicationStatus
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    status?: EnumApplicationStatusFieldUpdateOperationsInput | $Enums.ApplicationStatus
   }
 
   export type ApplicationCreateManyInput = {
@@ -10451,12 +10584,12 @@ export namespace Prisma {
     email: string
     phone: string
     cvUrl: string
+    jobId: string
+    createdAt?: Date | string
     message?: string | null
     notes?: string | null
-    jobId: string
-    status?: $Enums.ApplicationStatus
-    createdAt?: Date | string
     updatedAt?: Date | string
+    status?: $Enums.ApplicationStatus
   }
 
   export type ApplicationUpdateManyMutationInput = {
@@ -10465,11 +10598,11 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
     cvUrl?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     message?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
-    status?: EnumApplicationStatusFieldUpdateOperationsInput | $Enums.ApplicationStatus
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    status?: EnumApplicationStatusFieldUpdateOperationsInput | $Enums.ApplicationStatus
   }
 
   export type ApplicationUncheckedUpdateManyInput = {
@@ -10478,12 +10611,12 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
     cvUrl?: StringFieldUpdateOperationsInput | string
+    jobId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     message?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
-    jobId?: StringFieldUpdateOperationsInput | string
-    status?: EnumApplicationStatusFieldUpdateOperationsInput | $Enums.ApplicationStatus
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    status?: EnumApplicationStatusFieldUpdateOperationsInput | $Enums.ApplicationStatus
   }
 
   export type SiteSettingCreateInput = {
@@ -10498,20 +10631,27 @@ export namespace Prisma {
     instagram?: string | null
     logoUrl?: string | null
     heroImageUrl?: string | null
+    updatedAt?: Date | string
+    aboutStoryUrl?: string | null
+    aboutVisualBreakUrl?: string | null
     introImageUrl?: string | null
     portfolioProject1Url?: string | null
     portfolioProject2Url?: string | null
     portfolioProject3Url?: string | null
-    servicesMachiningUrl?: string | null
-    servicesRepairUrl?: string | null
     servicesFabricationUrl?: string | null
+    servicesMachiningUrl?: string | null
     servicesModificationUrl?: string | null
+    servicesRepairUrl?: string | null
+    servicesGuidanceUrl?: string | null
     servicesManufacturingUrl?: string | null
     servicesRestorationUrl?: string | null
-    servicesGuidanceUrl?: string | null
-    aboutStoryUrl?: string | null
-    aboutVisualBreakUrl?: string | null
-    updatedAt?: Date | string
+    businessHoursMon?: string
+    businessHoursTue?: string
+    businessHoursWed?: string
+    businessHoursThu?: string
+    businessHoursFri?: string
+    businessHoursSat?: string
+    businessHoursSun?: string
   }
 
   export type SiteSettingUncheckedCreateInput = {
@@ -10526,20 +10666,27 @@ export namespace Prisma {
     instagram?: string | null
     logoUrl?: string | null
     heroImageUrl?: string | null
+    updatedAt?: Date | string
+    aboutStoryUrl?: string | null
+    aboutVisualBreakUrl?: string | null
     introImageUrl?: string | null
     portfolioProject1Url?: string | null
     portfolioProject2Url?: string | null
     portfolioProject3Url?: string | null
-    servicesMachiningUrl?: string | null
-    servicesRepairUrl?: string | null
     servicesFabricationUrl?: string | null
+    servicesMachiningUrl?: string | null
     servicesModificationUrl?: string | null
+    servicesRepairUrl?: string | null
+    servicesGuidanceUrl?: string | null
     servicesManufacturingUrl?: string | null
     servicesRestorationUrl?: string | null
-    servicesGuidanceUrl?: string | null
-    aboutStoryUrl?: string | null
-    aboutVisualBreakUrl?: string | null
-    updatedAt?: Date | string
+    businessHoursMon?: string
+    businessHoursTue?: string
+    businessHoursWed?: string
+    businessHoursThu?: string
+    businessHoursFri?: string
+    businessHoursSat?: string
+    businessHoursSun?: string
   }
 
   export type SiteSettingUpdateInput = {
@@ -10554,20 +10701,27 @@ export namespace Prisma {
     instagram?: NullableStringFieldUpdateOperationsInput | string | null
     logoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     heroImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    aboutStoryUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    aboutVisualBreakUrl?: NullableStringFieldUpdateOperationsInput | string | null
     introImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     portfolioProject1Url?: NullableStringFieldUpdateOperationsInput | string | null
     portfolioProject2Url?: NullableStringFieldUpdateOperationsInput | string | null
     portfolioProject3Url?: NullableStringFieldUpdateOperationsInput | string | null
-    servicesMachiningUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    servicesRepairUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesFabricationUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    servicesMachiningUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesModificationUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    servicesRepairUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    servicesGuidanceUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesManufacturingUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesRestorationUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    servicesGuidanceUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    aboutStoryUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    aboutVisualBreakUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    businessHoursMon?: StringFieldUpdateOperationsInput | string
+    businessHoursTue?: StringFieldUpdateOperationsInput | string
+    businessHoursWed?: StringFieldUpdateOperationsInput | string
+    businessHoursThu?: StringFieldUpdateOperationsInput | string
+    businessHoursFri?: StringFieldUpdateOperationsInput | string
+    businessHoursSat?: StringFieldUpdateOperationsInput | string
+    businessHoursSun?: StringFieldUpdateOperationsInput | string
   }
 
   export type SiteSettingUncheckedUpdateInput = {
@@ -10582,20 +10736,27 @@ export namespace Prisma {
     instagram?: NullableStringFieldUpdateOperationsInput | string | null
     logoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     heroImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    aboutStoryUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    aboutVisualBreakUrl?: NullableStringFieldUpdateOperationsInput | string | null
     introImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     portfolioProject1Url?: NullableStringFieldUpdateOperationsInput | string | null
     portfolioProject2Url?: NullableStringFieldUpdateOperationsInput | string | null
     portfolioProject3Url?: NullableStringFieldUpdateOperationsInput | string | null
-    servicesMachiningUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    servicesRepairUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesFabricationUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    servicesMachiningUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesModificationUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    servicesRepairUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    servicesGuidanceUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesManufacturingUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesRestorationUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    servicesGuidanceUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    aboutStoryUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    aboutVisualBreakUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    businessHoursMon?: StringFieldUpdateOperationsInput | string
+    businessHoursTue?: StringFieldUpdateOperationsInput | string
+    businessHoursWed?: StringFieldUpdateOperationsInput | string
+    businessHoursThu?: StringFieldUpdateOperationsInput | string
+    businessHoursFri?: StringFieldUpdateOperationsInput | string
+    businessHoursSat?: StringFieldUpdateOperationsInput | string
+    businessHoursSun?: StringFieldUpdateOperationsInput | string
   }
 
   export type SiteSettingCreateManyInput = {
@@ -10610,20 +10771,27 @@ export namespace Prisma {
     instagram?: string | null
     logoUrl?: string | null
     heroImageUrl?: string | null
+    updatedAt?: Date | string
+    aboutStoryUrl?: string | null
+    aboutVisualBreakUrl?: string | null
     introImageUrl?: string | null
     portfolioProject1Url?: string | null
     portfolioProject2Url?: string | null
     portfolioProject3Url?: string | null
-    servicesMachiningUrl?: string | null
-    servicesRepairUrl?: string | null
     servicesFabricationUrl?: string | null
+    servicesMachiningUrl?: string | null
     servicesModificationUrl?: string | null
+    servicesRepairUrl?: string | null
+    servicesGuidanceUrl?: string | null
     servicesManufacturingUrl?: string | null
     servicesRestorationUrl?: string | null
-    servicesGuidanceUrl?: string | null
-    aboutStoryUrl?: string | null
-    aboutVisualBreakUrl?: string | null
-    updatedAt?: Date | string
+    businessHoursMon?: string
+    businessHoursTue?: string
+    businessHoursWed?: string
+    businessHoursThu?: string
+    businessHoursFri?: string
+    businessHoursSat?: string
+    businessHoursSun?: string
   }
 
   export type SiteSettingUpdateManyMutationInput = {
@@ -10638,20 +10806,27 @@ export namespace Prisma {
     instagram?: NullableStringFieldUpdateOperationsInput | string | null
     logoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     heroImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    aboutStoryUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    aboutVisualBreakUrl?: NullableStringFieldUpdateOperationsInput | string | null
     introImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     portfolioProject1Url?: NullableStringFieldUpdateOperationsInput | string | null
     portfolioProject2Url?: NullableStringFieldUpdateOperationsInput | string | null
     portfolioProject3Url?: NullableStringFieldUpdateOperationsInput | string | null
-    servicesMachiningUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    servicesRepairUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesFabricationUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    servicesMachiningUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesModificationUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    servicesRepairUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    servicesGuidanceUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesManufacturingUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesRestorationUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    servicesGuidanceUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    aboutStoryUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    aboutVisualBreakUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    businessHoursMon?: StringFieldUpdateOperationsInput | string
+    businessHoursTue?: StringFieldUpdateOperationsInput | string
+    businessHoursWed?: StringFieldUpdateOperationsInput | string
+    businessHoursThu?: StringFieldUpdateOperationsInput | string
+    businessHoursFri?: StringFieldUpdateOperationsInput | string
+    businessHoursSat?: StringFieldUpdateOperationsInput | string
+    businessHoursSun?: StringFieldUpdateOperationsInput | string
   }
 
   export type SiteSettingUncheckedUpdateManyInput = {
@@ -10666,20 +10841,27 @@ export namespace Prisma {
     instagram?: NullableStringFieldUpdateOperationsInput | string | null
     logoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     heroImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    aboutStoryUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    aboutVisualBreakUrl?: NullableStringFieldUpdateOperationsInput | string | null
     introImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     portfolioProject1Url?: NullableStringFieldUpdateOperationsInput | string | null
     portfolioProject2Url?: NullableStringFieldUpdateOperationsInput | string | null
     portfolioProject3Url?: NullableStringFieldUpdateOperationsInput | string | null
-    servicesMachiningUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    servicesRepairUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesFabricationUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    servicesMachiningUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesModificationUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    servicesRepairUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    servicesGuidanceUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesManufacturingUrl?: NullableStringFieldUpdateOperationsInput | string | null
     servicesRestorationUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    servicesGuidanceUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    aboutStoryUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    aboutVisualBreakUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    businessHoursMon?: StringFieldUpdateOperationsInput | string
+    businessHoursTue?: StringFieldUpdateOperationsInput | string
+    businessHoursWed?: StringFieldUpdateOperationsInput | string
+    businessHoursThu?: StringFieldUpdateOperationsInput | string
+    businessHoursFri?: StringFieldUpdateOperationsInput | string
+    businessHoursSat?: StringFieldUpdateOperationsInput | string
+    businessHoursSun?: StringFieldUpdateOperationsInput | string
   }
 
   export type StringFilter<$PrismaModel = never> = {
@@ -10833,13 +11015,13 @@ export namespace Prisma {
 
   export type ProjectCountOrderByAggregateInput = {
     id?: SortOrder
-    title?: SortOrder
-    description?: SortOrder
     category?: SortOrder
     imageUrl?: SortOrder
     publicId?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
   }
 
   export type ProjectMaxOrderByAggregateInput = {
@@ -10888,11 +11070,11 @@ export namespace Prisma {
 
   export type ServiceCountOrderByAggregateInput = {
     id?: SortOrder
-    title?: SortOrder
-    description?: SortOrder
     icon?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
   }
 
   export type ServiceMaxOrderByAggregateInput = {
@@ -10974,38 +11156,38 @@ export namespace Prisma {
 
   export type JobListingCountOrderByAggregateInput = {
     id?: SortOrder
-    title?: SortOrder
     department?: SortOrder
     location?: SortOrder
-    jobType?: SortOrder
-    salaryRange?: SortOrder
-    description?: SortOrder
-    requirements?: SortOrder
-    status?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    jobType?: SortOrder
+    salaryRange?: SortOrder
+    status?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    requirements?: SortOrder
   }
 
   export type JobListingMaxOrderByAggregateInput = {
     id?: SortOrder
     department?: SortOrder
     location?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
     jobType?: SortOrder
     salaryRange?: SortOrder
     status?: SortOrder
-    createdAt?: SortOrder
-    updatedAt?: SortOrder
   }
 
   export type JobListingMinOrderByAggregateInput = {
     id?: SortOrder
     department?: SortOrder
     location?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
     jobType?: SortOrder
     salaryRange?: SortOrder
     status?: SortOrder
-    createdAt?: SortOrder
-    updatedAt?: SortOrder
   }
 
   export type EnumJobTypeWithAggregatesFilter<$PrismaModel = never> = {
@@ -11046,12 +11228,12 @@ export namespace Prisma {
     email?: SortOrder
     phone?: SortOrder
     cvUrl?: SortOrder
+    jobId?: SortOrder
+    createdAt?: SortOrder
     message?: SortOrder
     notes?: SortOrder
-    jobId?: SortOrder
-    status?: SortOrder
-    createdAt?: SortOrder
     updatedAt?: SortOrder
+    status?: SortOrder
   }
 
   export type ApplicationMaxOrderByAggregateInput = {
@@ -11060,12 +11242,12 @@ export namespace Prisma {
     email?: SortOrder
     phone?: SortOrder
     cvUrl?: SortOrder
+    jobId?: SortOrder
+    createdAt?: SortOrder
     message?: SortOrder
     notes?: SortOrder
-    jobId?: SortOrder
-    status?: SortOrder
-    createdAt?: SortOrder
     updatedAt?: SortOrder
+    status?: SortOrder
   }
 
   export type ApplicationMinOrderByAggregateInput = {
@@ -11074,12 +11256,12 @@ export namespace Prisma {
     email?: SortOrder
     phone?: SortOrder
     cvUrl?: SortOrder
+    jobId?: SortOrder
+    createdAt?: SortOrder
     message?: SortOrder
     notes?: SortOrder
-    jobId?: SortOrder
-    status?: SortOrder
-    createdAt?: SortOrder
     updatedAt?: SortOrder
+    status?: SortOrder
   }
 
   export type EnumApplicationStatusWithAggregatesFilter<$PrismaModel = never> = {
@@ -11104,20 +11286,27 @@ export namespace Prisma {
     instagram?: SortOrder
     logoUrl?: SortOrder
     heroImageUrl?: SortOrder
+    updatedAt?: SortOrder
+    aboutStoryUrl?: SortOrder
+    aboutVisualBreakUrl?: SortOrder
     introImageUrl?: SortOrder
     portfolioProject1Url?: SortOrder
     portfolioProject2Url?: SortOrder
     portfolioProject3Url?: SortOrder
-    servicesMachiningUrl?: SortOrder
-    servicesRepairUrl?: SortOrder
     servicesFabricationUrl?: SortOrder
+    servicesMachiningUrl?: SortOrder
     servicesModificationUrl?: SortOrder
+    servicesRepairUrl?: SortOrder
+    servicesGuidanceUrl?: SortOrder
     servicesManufacturingUrl?: SortOrder
     servicesRestorationUrl?: SortOrder
-    servicesGuidanceUrl?: SortOrder
-    aboutStoryUrl?: SortOrder
-    aboutVisualBreakUrl?: SortOrder
-    updatedAt?: SortOrder
+    businessHoursMon?: SortOrder
+    businessHoursTue?: SortOrder
+    businessHoursWed?: SortOrder
+    businessHoursThu?: SortOrder
+    businessHoursFri?: SortOrder
+    businessHoursSat?: SortOrder
+    businessHoursSun?: SortOrder
   }
 
   export type SiteSettingMaxOrderByAggregateInput = {
@@ -11132,20 +11321,27 @@ export namespace Prisma {
     instagram?: SortOrder
     logoUrl?: SortOrder
     heroImageUrl?: SortOrder
+    updatedAt?: SortOrder
+    aboutStoryUrl?: SortOrder
+    aboutVisualBreakUrl?: SortOrder
     introImageUrl?: SortOrder
     portfolioProject1Url?: SortOrder
     portfolioProject2Url?: SortOrder
     portfolioProject3Url?: SortOrder
-    servicesMachiningUrl?: SortOrder
-    servicesRepairUrl?: SortOrder
     servicesFabricationUrl?: SortOrder
+    servicesMachiningUrl?: SortOrder
     servicesModificationUrl?: SortOrder
+    servicesRepairUrl?: SortOrder
+    servicesGuidanceUrl?: SortOrder
     servicesManufacturingUrl?: SortOrder
     servicesRestorationUrl?: SortOrder
-    servicesGuidanceUrl?: SortOrder
-    aboutStoryUrl?: SortOrder
-    aboutVisualBreakUrl?: SortOrder
-    updatedAt?: SortOrder
+    businessHoursMon?: SortOrder
+    businessHoursTue?: SortOrder
+    businessHoursWed?: SortOrder
+    businessHoursThu?: SortOrder
+    businessHoursFri?: SortOrder
+    businessHoursSat?: SortOrder
+    businessHoursSun?: SortOrder
   }
 
   export type SiteSettingMinOrderByAggregateInput = {
@@ -11160,20 +11356,27 @@ export namespace Prisma {
     instagram?: SortOrder
     logoUrl?: SortOrder
     heroImageUrl?: SortOrder
+    updatedAt?: SortOrder
+    aboutStoryUrl?: SortOrder
+    aboutVisualBreakUrl?: SortOrder
     introImageUrl?: SortOrder
     portfolioProject1Url?: SortOrder
     portfolioProject2Url?: SortOrder
     portfolioProject3Url?: SortOrder
-    servicesMachiningUrl?: SortOrder
-    servicesRepairUrl?: SortOrder
     servicesFabricationUrl?: SortOrder
+    servicesMachiningUrl?: SortOrder
     servicesModificationUrl?: SortOrder
+    servicesRepairUrl?: SortOrder
+    servicesGuidanceUrl?: SortOrder
     servicesManufacturingUrl?: SortOrder
     servicesRestorationUrl?: SortOrder
-    servicesGuidanceUrl?: SortOrder
-    aboutStoryUrl?: SortOrder
-    aboutVisualBreakUrl?: SortOrder
-    updatedAt?: SortOrder
+    businessHoursMon?: SortOrder
+    businessHoursTue?: SortOrder
+    businessHoursWed?: SortOrder
+    businessHoursThu?: SortOrder
+    businessHoursFri?: SortOrder
+    businessHoursSat?: SortOrder
+    businessHoursSun?: SortOrder
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -11445,11 +11648,11 @@ export namespace Prisma {
     email: string
     phone: string
     cvUrl: string
+    createdAt?: Date | string
     message?: string | null
     notes?: string | null
-    status?: $Enums.ApplicationStatus
-    createdAt?: Date | string
     updatedAt?: Date | string
+    status?: $Enums.ApplicationStatus
   }
 
   export type ApplicationUncheckedCreateWithoutJobInput = {
@@ -11458,11 +11661,11 @@ export namespace Prisma {
     email: string
     phone: string
     cvUrl: string
+    createdAt?: Date | string
     message?: string | null
     notes?: string | null
-    status?: $Enums.ApplicationStatus
-    createdAt?: Date | string
     updatedAt?: Date | string
+    status?: $Enums.ApplicationStatus
   }
 
   export type ApplicationCreateOrConnectWithoutJobInput = {
@@ -11500,40 +11703,40 @@ export namespace Prisma {
     email?: StringFilter<"Application"> | string
     phone?: StringFilter<"Application"> | string
     cvUrl?: StringFilter<"Application"> | string
+    jobId?: StringFilter<"Application"> | string
+    createdAt?: DateTimeFilter<"Application"> | Date | string
     message?: StringNullableFilter<"Application"> | string | null
     notes?: StringNullableFilter<"Application"> | string | null
-    jobId?: StringFilter<"Application"> | string
-    status?: EnumApplicationStatusFilter<"Application"> | $Enums.ApplicationStatus
-    createdAt?: DateTimeFilter<"Application"> | Date | string
     updatedAt?: DateTimeFilter<"Application"> | Date | string
+    status?: EnumApplicationStatusFilter<"Application"> | $Enums.ApplicationStatus
   }
 
   export type JobListingCreateWithoutApplicationsInput = {
     id?: string
-    title: JsonNullValueInput | InputJsonValue
     department: string
     location?: string
-    jobType?: $Enums.JobType
-    salaryRange?: string | null
-    description: JsonNullValueInput | InputJsonValue
-    requirements: JsonNullValueInput | InputJsonValue
-    status?: $Enums.JobStatus
     createdAt?: Date | string
     updatedAt?: Date | string
+    jobType?: $Enums.JobType
+    salaryRange?: string | null
+    status?: $Enums.JobStatus
+    title: JsonNullValueInput | InputJsonValue
+    description: JsonNullValueInput | InputJsonValue
+    requirements: JsonNullValueInput | InputJsonValue
   }
 
   export type JobListingUncheckedCreateWithoutApplicationsInput = {
     id?: string
-    title: JsonNullValueInput | InputJsonValue
     department: string
     location?: string
-    jobType?: $Enums.JobType
-    salaryRange?: string | null
-    description: JsonNullValueInput | InputJsonValue
-    requirements: JsonNullValueInput | InputJsonValue
-    status?: $Enums.JobStatus
     createdAt?: Date | string
     updatedAt?: Date | string
+    jobType?: $Enums.JobType
+    salaryRange?: string | null
+    status?: $Enums.JobStatus
+    title: JsonNullValueInput | InputJsonValue
+    description: JsonNullValueInput | InputJsonValue
+    requirements: JsonNullValueInput | InputJsonValue
   }
 
   export type JobListingCreateOrConnectWithoutApplicationsInput = {
@@ -11554,30 +11757,30 @@ export namespace Prisma {
 
   export type JobListingUpdateWithoutApplicationsInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: JsonNullValueInput | InputJsonValue
     department?: StringFieldUpdateOperationsInput | string
     location?: StringFieldUpdateOperationsInput | string
-    jobType?: EnumJobTypeFieldUpdateOperationsInput | $Enums.JobType
-    salaryRange?: NullableStringFieldUpdateOperationsInput | string | null
-    description?: JsonNullValueInput | InputJsonValue
-    requirements?: JsonNullValueInput | InputJsonValue
-    status?: EnumJobStatusFieldUpdateOperationsInput | $Enums.JobStatus
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    jobType?: EnumJobTypeFieldUpdateOperationsInput | $Enums.JobType
+    salaryRange?: NullableStringFieldUpdateOperationsInput | string | null
+    status?: EnumJobStatusFieldUpdateOperationsInput | $Enums.JobStatus
+    title?: JsonNullValueInput | InputJsonValue
+    description?: JsonNullValueInput | InputJsonValue
+    requirements?: JsonNullValueInput | InputJsonValue
   }
 
   export type JobListingUncheckedUpdateWithoutApplicationsInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: JsonNullValueInput | InputJsonValue
     department?: StringFieldUpdateOperationsInput | string
     location?: StringFieldUpdateOperationsInput | string
-    jobType?: EnumJobTypeFieldUpdateOperationsInput | $Enums.JobType
-    salaryRange?: NullableStringFieldUpdateOperationsInput | string | null
-    description?: JsonNullValueInput | InputJsonValue
-    requirements?: JsonNullValueInput | InputJsonValue
-    status?: EnumJobStatusFieldUpdateOperationsInput | $Enums.JobStatus
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    jobType?: EnumJobTypeFieldUpdateOperationsInput | $Enums.JobType
+    salaryRange?: NullableStringFieldUpdateOperationsInput | string | null
+    status?: EnumJobStatusFieldUpdateOperationsInput | $Enums.JobStatus
+    title?: JsonNullValueInput | InputJsonValue
+    description?: JsonNullValueInput | InputJsonValue
+    requirements?: JsonNullValueInput | InputJsonValue
   }
 
   export type ApplicationCreateManyJobInput = {
@@ -11586,11 +11789,11 @@ export namespace Prisma {
     email: string
     phone: string
     cvUrl: string
+    createdAt?: Date | string
     message?: string | null
     notes?: string | null
-    status?: $Enums.ApplicationStatus
-    createdAt?: Date | string
     updatedAt?: Date | string
+    status?: $Enums.ApplicationStatus
   }
 
   export type ApplicationUpdateWithoutJobInput = {
@@ -11599,11 +11802,11 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
     cvUrl?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     message?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
-    status?: EnumApplicationStatusFieldUpdateOperationsInput | $Enums.ApplicationStatus
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    status?: EnumApplicationStatusFieldUpdateOperationsInput | $Enums.ApplicationStatus
   }
 
   export type ApplicationUncheckedUpdateWithoutJobInput = {
@@ -11612,11 +11815,11 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
     cvUrl?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     message?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
-    status?: EnumApplicationStatusFieldUpdateOperationsInput | $Enums.ApplicationStatus
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    status?: EnumApplicationStatusFieldUpdateOperationsInput | $Enums.ApplicationStatus
   }
 
   export type ApplicationUncheckedUpdateManyWithoutJobInput = {
@@ -11625,11 +11828,11 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
     cvUrl?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     message?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
-    status?: EnumApplicationStatusFieldUpdateOperationsInput | $Enums.ApplicationStatus
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    status?: EnumApplicationStatusFieldUpdateOperationsInput | $Enums.ApplicationStatus
   }
 
 

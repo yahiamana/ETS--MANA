@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
   output   = "../lib/generated/client"
@@ -25,22 +19,22 @@ model User {
 
 model Project {
   id          String   @id @default(cuid())
-  title       Json // { en: "", fr: "", ar: "" }
-  description Json
   category    String
   imageUrl    String
-  publicId    String // Cloudinary public ID
+  publicId    String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+  title       Json
+  description Json
 }
 
 model Service {
   id          String   @id @default(cuid())
-  title       Json
-  description Json
   icon        String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+  title       Json
+  description Json
 }
 
 model QuoteRequest {
@@ -52,8 +46,73 @@ model QuoteRequest {
   phone       String?
   description String
   fileUrl     String?
-  status      String   @default("PENDING") // PENDING, REVIEWED, CONTACTED, COMPLETED
+  status      String   @default("PENDING")
   createdAt   DateTime @default(now())
+}
+
+model JobListing {
+  id           String        @id @default(cuid())
+  department   String
+  location     String        @default("Workshop")
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  jobType      JobType       @default(FULL_TIME)
+  salaryRange  String?
+  status       JobStatus     @default(DRAFT)
+  title        Json
+  description  Json
+  requirements Json
+  applications Application[]
+}
+
+model Application {
+  id        String            @id @default(cuid())
+  fullName  String
+  email     String
+  phone     String
+  cvUrl     String
+  jobId     String
+  createdAt DateTime          @default(now())
+  message   String?
+  notes     String?
+  updatedAt DateTime          @updatedAt
+  status    ApplicationStatus @default(NEW)
+  job       JobListing        @relation(fields: [jobId], references: [id], onDelete: Cascade)
+}
+
+model SiteSetting {
+  id                       String   @id @default("singleton")
+  siteName                 String   @default("MANA")
+  address                  String   @default("123 Industrial Zone, Agricultural District")
+  email                    String   @default("contact@manaworkshops.com")
+  phone                    String   @default("+1 (234) 567-890")
+  whatsapp                 String?
+  facebook                 String?
+  linkedin                 String?
+  instagram                String?
+  logoUrl                  String?
+  heroImageUrl             String?
+  updatedAt                DateTime @updatedAt
+  aboutStoryUrl            String?
+  aboutVisualBreakUrl      String?
+  introImageUrl            String?
+  portfolioProject1Url     String?
+  portfolioProject2Url     String?
+  portfolioProject3Url     String?
+  servicesFabricationUrl   String?
+  servicesMachiningUrl     String?
+  servicesModificationUrl  String?
+  servicesRepairUrl        String?
+  servicesGuidanceUrl      String?
+  servicesManufacturingUrl String?
+  servicesRestorationUrl   String?
+  businessHoursMon         String   @default("08:00 - 18:00")
+  businessHoursTue         String   @default("08:00 - 18:00")
+  businessHoursWed         String   @default("08:00 - 18:00")
+  businessHoursThu         String   @default("08:00 - 18:00")
+  businessHoursFri         String   @default("08:00 - 18:00")
+  businessHoursSat         String   @default("09:00 - 13:00")
+  businessHoursSun         String   @default("Closed")
 }
 
 enum JobStatus {
@@ -77,69 +136,4 @@ enum ApplicationStatus {
   OFFER
   REJECTED
   HIRED
-}
-
-model JobListing {
-  id           String        @id @default(cuid())
-  title        Json
-  department   String
-  location     String        @default("Workshop")
-  jobType      JobType       @default(FULL_TIME)
-  salaryRange  String?
-  description  Json
-  requirements Json
-  status       JobStatus     @default(DRAFT)
-  applications Application[]
-  createdAt    DateTime      @default(now())
-  updatedAt    DateTime      @updatedAt
-}
-
-model Application {
-  id        String            @id @default(cuid())
-  fullName  String
-  email     String
-  phone     String
-  cvUrl     String
-  message   String?
-  notes     String?
-  jobId     String
-  job       JobListing        @relation(fields: [jobId], references: [id], onDelete: Cascade)
-  status    ApplicationStatus @default(NEW)
-  createdAt DateTime          @default(now())
-  updatedAt DateTime          @updatedAt
-}
-
-model SiteSetting {
-  id           String  @id @default("singleton")
-  siteName     String  @default("MANA")
-  address      String  @default("123 Industrial Zone, Agricultural District")
-  email        String  @default("contact@manaworkshops.com")
-  phone        String  @default("+1 (234) 567-890")
-  whatsapp     String?
-  facebook     String?
-  linkedin     String?
-  instagram    String?
-  logoUrl      String?
-  heroImageUrl String?
-
-  // Home Page Media
-  introImageUrl        String?
-  portfolioProject1Url String?
-  portfolioProject2Url String?
-  portfolioProject3Url String?
-
-  // Services Media
-  servicesMachiningUrl     String?
-  servicesRepairUrl        String?
-  servicesFabricationUrl   String?
-  servicesModificationUrl  String?
-  servicesManufacturingUrl String?
-  servicesRestorationUrl   String?
-  servicesGuidanceUrl      String?
-
-  // About Page Media
-  aboutStoryUrl       String?
-  aboutVisualBreakUrl String?
-
-  updatedAt DateTime @updatedAt
 }

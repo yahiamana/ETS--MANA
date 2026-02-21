@@ -106,6 +106,13 @@ model SiteSetting {
   servicesGuidanceUrl      String?
   servicesManufacturingUrl String?
   servicesRestorationUrl   String?
+  businessHoursMon         String   @default("08:00 - 18:00")
+  businessHoursTue         String   @default("08:00 - 18:00")
+  businessHoursWed         String   @default("08:00 - 18:00")
+  businessHoursThu         String   @default("08:00 - 18:00")
+  businessHoursFri         String   @default("08:00 - 18:00")
+  businessHoursSat         String   @default("09:00 - 13:00")
+  businessHoursSun         String   @default("Closed")
 }
 
 enum JobStatus {
