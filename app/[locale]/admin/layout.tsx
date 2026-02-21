@@ -22,6 +22,7 @@ const sidebarLinks = [
   { name: "Portfolio", href: "/admin/portfolio", icon: Briefcase },
   { name: "Jobs", href: "/admin/recruitment", icon: FileText },
   { name: "Quote Requests", href: "/admin/quotes", icon: MessageSquare },
+  { name: "Contact Messages", href: "/admin/messages", icon: MessageSquare },
   { name: "Applications", href: "/admin/applications", icon: Users },
   { name: "Settings", href: "/admin/settings", icon: Settings },
 ];

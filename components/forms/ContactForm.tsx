@@ -3,22 +3,14 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
-import { Loader2, CheckCircle, Send } from "lucide-react";
+import { contactSchema, type ContactFormData } from "@/lib/validations";
+import { Loader2, CheckCircle, Send, AlertCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const contactSchema = z.object({
-  name: z.string().min(2, "Name is required"),
-  email: z.string().email("Invalid email address"),
-  subject: z.string().min(5, "Subject is required"),
-  message: z.string().min(20, "Message must be at least 20 characters"),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [serverError, setServerError] = useState<string | null>(null);
 
   const {
     register,
@@ -31,11 +23,26 @@ export default function ContactForm() {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-    // In a real app, this would hit an API route
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsSuccess(true);
-    reset();
-    setIsSubmitting(false);
+    setServerError(null);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setIsSuccess(true);
+        reset();
+      } else {
+        setServerError(result.error || "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setServerError("Connection error. Please check your internet and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSuccess) {
@@ -48,7 +55,7 @@ export default function ContactForm() {
         </p>
         <button
           onClick={() => setIsSuccess(false)}
-          className="bg-primary text-primary-foreground px-8 py-3 font-bold uppercase tracking-widest"
+          className="bg-primary text-primary-foreground px-8 py-3 font-bold uppercase tracking-widest hover:bg-accent transition-colors"
         >
           Send Another Message
         </button>
@@ -58,6 +65,13 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 bg-card p-8 md:p-12 border border-border shadow-sm transition-colors">
+      {serverError && (
+        <div className="bg-red-500/10 border-l-4 border-red-500 p-4 flex items-center space-x-3 text-red-500 mb-6">
+          <AlertCircle className="w-5 h-5 shrink-0" />
+          <p className="text-sm font-bold uppercase tracking-wide">{serverError}</p>
+        </div>
+      )}
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="block text-[10px] font-black uppercase tracking-widest text-foreground mb-2">Your Name</label>
